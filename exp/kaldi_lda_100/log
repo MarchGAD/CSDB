@@ -1,0 +1,1820 @@
+LdaNet(
+  (lda): Linear(in_features=512, out_features=100, bias=True)
+  (basic): BasicNet(
+    (fcs): Sequential(
+      (fcs0): Linear(in_features=20100, out_features=2048, bias=True)
+      (relu0): ReLU()
+      (dropout0): Dropout(p=0.5)
+      (output): Linear(in_features=2048, out_features=1, bias=True)
+    )
+  )
+)
+Dealing with data.
+Using strategy batch_hard
+The validate_num is 121800, the train_num is 1145141919
+epoch 1, step 99, loss: 1.025260.
+epoch 1, step 199, loss: 0.918434.
+epoch 1, step 299, loss: 0.891282.
+epoch 1, step 399, loss: 0.677033.
+epoch 1, step 499, loss: 0.676445.
+epoch 1, step 599, loss: 0.854172.
+epoch 1, step 699, loss: 0.756922.
+epoch 1, step 799, loss: 0.392893.
+epoch 1, step 899, loss: 0.556786.
+epoch 1, step 999, loss: 0.595355.
+epoch 1, step 1099, loss: 0.958067.
+epoch 1, step 1199, loss: 0.791957.
+epoch 1, step 1299, loss: 1.214410.
+epoch 1, step 1399, loss: 0.967344.
+epoch 1, step 1499, loss: 0.999913.
+epoch 1, step 1599, loss: 0.849386.
+epoch 1, step 1699, loss: 0.813848.
+epoch 1, step 1799, loss: 0.665544.
+epoch 1, step 1899, loss: 0.406007.
+epoch 1, step 1999, loss: 0.650313.
+epoch 1, step 2099, loss: 0.872269.
+epoch 1, step 2199, loss: 0.648741.
+epoch 1, step 2299, loss: 1.129365.
+epoch 1, step 2399, loss: 0.698671.
+epoch 1, step 2499, loss: 0.874505.
+epoch 1, step 2599, loss: 0.835337.
+epoch 1, step 2699, loss: 0.579448.
+epoch 1, step 2799, loss: 0.949697.
+epoch 1, step 2899, loss: 1.452577.
+epoch 1, step 2999, loss: 1.069769.
+Saving model to ./exp/20200509/kaldi_lda_100_lessnormalized/nnet/kaldi_lda_100_lessnormalized_epoch_1,finished.
+Calculating the valid_eer and valid_dcf.
+valid_eer: 1.862068965517241, 
+valid_minDCF(p-target=0.01): 0.21438423645319926,
+valid_minDCF(p-target=0.001): 0.27448275862068966
+----------------------------------------
+epoch 2, step 3099, loss: 0.945090.
+epoch 2, step 3199, loss: 0.678287.
+epoch 2, step 3299, loss: 1.059437.
+epoch 2, step 3399, loss: 0.710152.
+epoch 2, step 3499, loss: 0.652768.
+epoch 2, step 3599, loss: 0.472243.
+epoch 2, step 3699, loss: 1.148358.
+epoch 2, step 3799, loss: 1.362818.
+epoch 2, step 3899, loss: 0.676641.
+epoch 2, step 3999, loss: 1.223760.
+epoch 2, step 4099, loss: 0.900324.
+epoch 2, step 4199, loss: 1.371572.
+epoch 2, step 4299, loss: 0.855929.
+epoch 2, step 4399, loss: 0.470814.
+epoch 2, step 4499, loss: 0.736002.
+epoch 2, step 4599, loss: 1.158651.
+epoch 2, step 4699, loss: 0.892231.
+epoch 2, step 4799, loss: 1.124115.
+epoch 2, step 4899, loss: 1.169677.
+epoch 2, step 4999, loss: 1.053989.
+epoch 2, step 5099, loss: 1.289591.
+epoch 2, step 5199, loss: 0.593669.
+epoch 2, step 5299, loss: 0.980076.
+epoch 2, step 5399, loss: 1.085522.
+epoch 2, step 5499, loss: 0.861487.
+epoch 2, step 5599, loss: 0.895819.
+epoch 2, step 5699, loss: 0.603378.
+epoch 2, step 5799, loss: 0.921804.
+epoch 2, step 5899, loss: 1.026992.
+epoch 2, step 5999, loss: 1.044477.
+Saving model to ./exp/20200509/kaldi_lda_100_lessnormalized/nnet/kaldi_lda_100_lessnormalized_epoch_2,finished.
+Calculating the valid_eer and valid_dcf.
+valid_eer: 1.9310344827586208, 
+valid_minDCF(p-target=0.01): 0.1732266009852209,
+valid_minDCF(p-target=0.001): 0.2655172413793103
+----------------------------------------
+epoch 3, step 6099, loss: 1.145779.
+epoch 3, step 6199, loss: 0.650401.
+epoch 3, step 6299, loss: 0.690367.
+epoch 3, step 6399, loss: 1.038780.
+epoch 3, step 6499, loss: 1.243408.
+epoch 3, step 6599, loss: 1.880390.
+epoch 3, step 6699, loss: 0.764962.
+epoch 3, step 6799, loss: 1.092393.
+epoch 3, step 6899, loss: 0.663246.
+epoch 3, step 6999, loss: 1.216724.
+epoch 3, step 7099, loss: 0.754216.
+epoch 3, step 7199, loss: 0.863703.
+epoch 3, step 7299, loss: 1.005676.
+epoch 3, step 7399, loss: 1.022405.
+epoch 3, step 7499, loss: 0.787635.
+epoch 3, step 7599, loss: 1.729112.
+epoch 3, step 7699, loss: 0.467182.
+epoch 3, step 7799, loss: 1.405942.
+epoch 3, step 7899, loss: 1.510919.
+epoch 3, step 7999, loss: 1.317342.
+epoch 3, step 8099, loss: 0.852665.
+epoch 3, step 8199, loss: 0.566487.
+epoch 3, step 8299, loss: 0.798436.
+epoch 3, step 8399, loss: 0.606109.
+epoch 3, step 8499, loss: 0.945310.
+epoch 3, step 8599, loss: 1.703216.
+epoch 3, step 8699, loss: 0.705848.
+epoch 3, step 8799, loss: 1.281008.
+epoch 3, step 8899, loss: 0.389012.
+epoch 3, step 8999, loss: 0.942682.
+Saving model to ./exp/20200509/kaldi_lda_100_lessnormalized/nnet/kaldi_lda_100_lessnormalized_epoch_3,finished.
+Calculating the valid_eer and valid_dcf.
+valid_eer: 1.689655172413793, 
+valid_minDCF(p-target=0.01): 0.19221674876847614,
+valid_minDCF(p-target=0.001): 0.33266009852213746
+----------------------------------------
+epoch 4, step 9099, loss: 0.408846.
+epoch 4, step 9199, loss: 1.445492.
+epoch 4, step 9299, loss: 0.453628.
+epoch 4, step 9399, loss: 1.490972.
+epoch 4, step 9499, loss: 0.845249.
+epoch 4, step 9599, loss: 0.579932.
+epoch 4, step 9699, loss: 0.857823.
+epoch 4, step 9799, loss: 0.188441.
+epoch 4, step 9899, loss: 0.751243.
+epoch 4, step 9999, loss: 0.871855.
+epoch 4, step 10099, loss: 0.479122.
+epoch 4, step 10199, loss: 1.048674.
+epoch 4, step 10299, loss: 0.944590.
+epoch 4, step 10399, loss: 1.022517.
+epoch 4, step 10499, loss: 0.736937.
+epoch 4, step 10599, loss: 0.594206.
+epoch 4, step 10699, loss: 0.645315.
+epoch 4, step 10799, loss: 0.917208.
+epoch 4, step 10899, loss: 1.448633.
+epoch 4, step 10999, loss: 0.968616.
+epoch 4, step 11099, loss: 0.812043.
+epoch 4, step 11199, loss: 0.773350.
+epoch 4, step 11299, loss: 1.000009.
+epoch 4, step 11399, loss: 0.954446.
+epoch 4, step 11499, loss: 1.025922.
+epoch 4, step 11599, loss: 0.647063.
+epoch 4, step 11699, loss: 1.023641.
+epoch 4, step 11799, loss: 1.323989.
+epoch 4, step 11899, loss: 0.752510.
+epoch 4, step 11999, loss: 0.965434.
+Saving model to ./exp/20200509/kaldi_lda_100_lessnormalized/nnet/kaldi_lda_100_lessnormalized_epoch_4,finished.
+Calculating the valid_eer and valid_dcf.
+valid_eer: 1.6551724137931034, 
+valid_minDCF(p-target=0.01): 0.16600985221675202,
+valid_minDCF(p-target=0.001): 0.24783251231524092
+----------------------------------------
+epoch 5, step 12099, loss: 0.848244.
+epoch 5, step 12199, loss: 0.415262.
+epoch 5, step 12299, loss: 0.973254.
+epoch 5, step 12399, loss: 1.387149.
+epoch 5, step 12499, loss: 1.496645.
+epoch 5, step 12599, loss: 0.851845.
+epoch 5, step 12699, loss: 0.897854.
+epoch 5, step 12799, loss: 0.579451.
+epoch 5, step 12899, loss: 1.404799.
+epoch 5, step 12999, loss: 1.302326.
+epoch 5, step 13099, loss: 0.650219.
+epoch 5, step 13199, loss: 0.697842.
+epoch 5, step 13299, loss: 0.797507.
+epoch 5, step 13399, loss: 0.753396.
+epoch 5, step 13499, loss: 0.825134.
+epoch 5, step 13599, loss: 1.301919.
+epoch 5, step 13699, loss: 0.828124.
+epoch 5, step 13799, loss: 0.329998.
+epoch 5, step 13899, loss: 1.323699.
+epoch 5, step 13999, loss: 0.757567.
+epoch 5, step 14099, loss: 1.145954.
+epoch 5, step 14199, loss: 1.047680.
+epoch 5, step 14299, loss: 0.720379.
+epoch 5, step 14399, loss: 0.868963.
+epoch 5, step 14499, loss: 0.577611.
+epoch 5, step 14599, loss: 1.059706.
+epoch 5, step 14699, loss: 0.360880.
+epoch 5, step 14799, loss: 0.882723.
+epoch 5, step 14899, loss: 0.456668.
+epoch 5, step 14999, loss: 0.920740.
+Saving model to ./exp/20200509/kaldi_lda_100_lessnormalized/nnet/kaldi_lda_100_lessnormalized_epoch_5,finished.
+Calculating the valid_eer and valid_dcf.
+valid_eer: 1.5862068965517242, 
+valid_minDCF(p-target=0.01): 0.17482758620689773,
+valid_minDCF(p-target=0.001): 0.23908866995077938
+----------------------------------------
+epoch 6, step 15099, loss: 1.159491.
+epoch 6, step 15199, loss: 0.943267.
+epoch 6, step 15299, loss: 0.397537.
+epoch 6, step 15399, loss: 1.134516.
+epoch 6, step 15499, loss: 0.676968.
+epoch 6, step 15599, loss: 0.986115.
+epoch 6, step 15699, loss: 0.774155.
+epoch 6, step 15799, loss: 0.974344.
+epoch 6, step 15899, loss: 1.449432.
+epoch 6, step 15999, loss: 1.365182.
+epoch 6, step 16099, loss: 0.701237.
+epoch 6, step 16199, loss: 0.754599.
+epoch 6, step 16299, loss: 0.919946.
+epoch 6, step 16399, loss: 1.081113.
+epoch 6, step 16499, loss: 1.291113.
+epoch 6, step 16599, loss: 0.746628.
+epoch 6, step 16699, loss: 0.684425.
+epoch 6, step 16799, loss: 1.768992.
+epoch 6, step 16899, loss: 0.368347.
+epoch 6, step 16999, loss: 0.827042.
+epoch 6, step 17099, loss: 1.185209.
+epoch 6, step 17199, loss: 1.289646.
+epoch 6, step 17299, loss: 1.467183.
+epoch 6, step 17399, loss: 1.066036.
+epoch 6, step 17499, loss: 1.022612.
+epoch 6, step 17599, loss: 1.120567.
+epoch 6, step 17699, loss: 0.481877.
+epoch 6, step 17799, loss: 0.949076.
+epoch 6, step 17899, loss: 0.929338.
+epoch 6, step 17999, loss: 0.882234.
+Saving model to ./exp/20200509/kaldi_lda_100_lessnormalized/nnet/kaldi_lda_100_lessnormalized_epoch_6,finished.
+Calculating the valid_eer and valid_dcf.
+valid_eer: 1.6551724137931034, 
+valid_minDCF(p-target=0.01): 0.1913054187192131,
+valid_minDCF(p-target=0.001): 0.32482758620689656
+----------------------------------------
+epoch 7, step 18099, loss: 0.756413.
+epoch 7, step 18199, loss: 1.014173.
+epoch 7, step 18299, loss: 0.689983.
+epoch 7, step 18399, loss: 0.862425.
+epoch 7, step 18499, loss: 0.516237.
+epoch 7, step 18599, loss: 1.836067.
+epoch 7, step 18699, loss: 0.404028.
+epoch 7, step 18799, loss: 1.157970.
+epoch 7, step 18899, loss: 0.290113.
+epoch 7, step 18999, loss: 1.265457.
+epoch 7, step 19099, loss: 0.946085.
+epoch 7, step 19199, loss: 1.304636.
+epoch 7, step 19299, loss: 0.664095.
+epoch 7, step 19399, loss: 1.073669.
+epoch 7, step 19499, loss: 1.137813.
+epoch 7, step 19599, loss: 0.762183.
+epoch 7, step 19699, loss: 0.688541.
+epoch 7, step 19799, loss: 0.624490.
+epoch 7, step 19899, loss: 0.777941.
+epoch 7, step 19999, loss: 0.782701.
+epoch 7, step 20099, loss: 0.853985.
+epoch 7, step 20199, loss: 1.073467.
+epoch 7, step 20299, loss: 1.341007.
+epoch 7, step 20399, loss: 1.101410.
+epoch 7, step 20499, loss: 0.782647.
+epoch 7, step 20599, loss: 0.871554.
+epoch 7, step 20699, loss: 0.528755.
+epoch 7, step 20799, loss: 1.305515.
+epoch 7, step 20899, loss: 0.993651.
+epoch 7, step 20999, loss: 1.608649.
+Saving model to ./exp/20200509/kaldi_lda_100_lessnormalized/nnet/kaldi_lda_100_lessnormalized_epoch_7,finished.
+Calculating the valid_eer and valid_dcf.
+valid_eer: 1.7931034482758619, 
+valid_minDCF(p-target=0.01): 0.19098522167488216,
+valid_minDCF(p-target=0.001): 0.3105911330048961
+----------------------------------------
+epoch 8, step 21099, loss: 1.098151.
+epoch 8, step 21199, loss: 0.824703.
+epoch 8, step 21299, loss: 1.038385.
+epoch 8, step 21399, loss: 0.869248.
+epoch 8, step 21499, loss: 0.848788.
+epoch 8, step 21599, loss: 1.258621.
+epoch 8, step 21699, loss: 0.955474.
+epoch 8, step 21799, loss: 1.595387.
+epoch 8, step 21899, loss: 0.613643.
+epoch 8, step 21999, loss: 0.501231.
+epoch 8, step 22099, loss: 0.825946.
+epoch 8, step 22199, loss: 0.411184.
+epoch 8, step 22299, loss: 0.400856.
+epoch 8, step 22399, loss: 1.405724.
+epoch 8, step 22499, loss: 1.005105.
+epoch 8, step 22599, loss: 0.969358.
+epoch 8, step 22699, loss: 0.642486.
+epoch 8, step 22799, loss: 0.956343.
+epoch 8, step 22899, loss: 0.961625.
+epoch 8, step 22999, loss: 1.113274.
+epoch 8, step 23099, loss: 0.533308.
+epoch 8, step 23199, loss: 1.098551.
+epoch 8, step 23299, loss: 0.914617.
+epoch 8, step 23399, loss: 1.321528.
+epoch 8, step 23499, loss: 0.615424.
+epoch 8, step 23599, loss: 0.784320.
+epoch 8, step 23699, loss: 0.734495.
+epoch 8, step 23799, loss: 0.602999.
+epoch 8, step 23899, loss: 0.373791.
+epoch 8, step 23999, loss: 1.074268.
+Saving model to ./exp/20200509/kaldi_lda_100_lessnormalized/nnet/kaldi_lda_100_lessnormalized_epoch_8,finished.
+Calculating the valid_eer and valid_dcf.
+valid_eer: 1.7241379310344827, 
+valid_minDCF(p-target=0.01): 0.1631527093596041,
+valid_minDCF(p-target=0.001): 0.2765763546798134
+----------------------------------------
+epoch 9, step 24099, loss: 0.944666.
+epoch 9, step 24199, loss: 0.479760.
+epoch 9, step 24299, loss: 0.529029.
+epoch 9, step 24399, loss: 0.911932.
+epoch 9, step 24499, loss: 0.618110.
+epoch 9, step 24599, loss: 0.972644.
+epoch 9, step 24699, loss: 0.472215.
+epoch 9, step 24799, loss: 0.927646.
+epoch 9, step 24899, loss: 0.884651.
+epoch 9, step 24999, loss: 0.610775.
+epoch 9, step 25099, loss: 0.706635.
+epoch 9, step 25199, loss: 0.793982.
+epoch 9, step 25299, loss: 0.921286.
+epoch 9, step 25399, loss: 0.773764.
+epoch 9, step 25499, loss: 0.142394.
+epoch 9, step 25599, loss: 0.823696.
+epoch 9, step 25699, loss: 1.414064.
+epoch 9, step 25799, loss: 1.283281.
+epoch 9, step 25899, loss: 1.049736.
+epoch 9, step 25999, loss: 0.737576.
+epoch 9, step 26099, loss: 1.101320.
+epoch 9, step 26199, loss: 0.489694.
+epoch 9, step 26299, loss: 0.939899.
+epoch 9, step 26399, loss: 0.878759.
+epoch 9, step 26499, loss: 0.835611.
+epoch 9, step 26599, loss: 0.871875.
+epoch 9, step 26699, loss: 0.406558.
+epoch 9, step 26799, loss: 0.799907.
+epoch 9, step 26899, loss: 1.405046.
+epoch 9, step 26999, loss: 1.116074.
+Saving model to ./exp/20200509/kaldi_lda_100_lessnormalized/nnet/kaldi_lda_100_lessnormalized_epoch_9,finished.
+Calculating the valid_eer and valid_dcf.
+valid_eer: 1.6551724137931034, 
+valid_minDCF(p-target=0.01): 0.17958128078817864,
+valid_minDCF(p-target=0.001): 0.2777093596059518
+----------------------------------------
+epoch 10, step 27099, loss: 1.285823.
+epoch 10, step 27199, loss: 0.945027.
+epoch 10, step 27299, loss: 0.981211.
+epoch 10, step 27399, loss: 0.956092.
+epoch 10, step 27499, loss: 0.904370.
+epoch 10, step 27599, loss: 1.268864.
+epoch 10, step 27699, loss: 1.149736.
+epoch 10, step 27799, loss: 1.355187.
+epoch 10, step 27899, loss: 0.891811.
+epoch 10, step 27999, loss: 1.474374.
+epoch 10, step 28099, loss: 0.751695.
+epoch 10, step 28199, loss: 1.113023.
+epoch 10, step 28299, loss: 0.874652.
+epoch 10, step 28399, loss: 0.884407.
+epoch 10, step 28499, loss: 0.194291.
+epoch 10, step 28599, loss: 0.323168.
+epoch 10, step 28699, loss: 1.093606.
+epoch 10, step 28799, loss: 0.986925.
+epoch 10, step 28899, loss: 0.452779.
+epoch 10, step 28999, loss: 0.989537.
+epoch 10, step 29099, loss: 0.629228.
+epoch 10, step 29199, loss: 0.782928.
+epoch 10, step 29299, loss: 1.061362.
+epoch 10, step 29399, loss: 0.806721.
+epoch 10, step 29499, loss: 0.960871.
+epoch 10, step 29599, loss: 0.610061.
+epoch 10, step 29699, loss: 1.144525.
+epoch 10, step 29799, loss: 1.170460.
+epoch 10, step 29899, loss: 0.375454.
+epoch 10, step 29999, loss: 0.574937.
+Saving model to ./exp/20200509/kaldi_lda_100_lessnormalized/nnet/kaldi_lda_100_lessnormalized_epoch_10,finished.
+Calculating the valid_eer and valid_dcf.
+valid_eer: 1.7241379310344827, 
+valid_minDCF(p-target=0.01): 0.1848275862068989,
+valid_minDCF(p-target=0.001): 0.30093596059110295
+----------------------------------------
+Haven't imporved for 5 epochs, down the lr to [5e-05]
+epoch 11, step 30099, loss: 0.607121.
+epoch 11, step 30199, loss: 1.131863.
+epoch 11, step 30299, loss: 1.180428.
+epoch 11, step 30399, loss: 1.197424.
+epoch 11, step 30499, loss: 0.761309.
+epoch 11, step 30599, loss: 1.076853.
+epoch 11, step 30699, loss: 0.535491.
+epoch 11, step 30799, loss: 0.939377.
+epoch 11, step 30899, loss: 0.917317.
+epoch 11, step 30999, loss: 1.587735.
+epoch 11, step 31099, loss: 0.921646.
+epoch 11, step 31199, loss: 0.840990.
+epoch 11, step 31299, loss: 1.123386.
+epoch 11, step 31399, loss: 0.773681.
+epoch 11, step 31499, loss: 0.770204.
+epoch 11, step 31599, loss: 1.053716.
+epoch 11, step 31699, loss: 0.345218.
+epoch 11, step 31799, loss: 0.936115.
+epoch 11, step 31899, loss: 0.543279.
+epoch 11, step 31999, loss: 1.129879.
+epoch 11, step 32099, loss: 0.418356.
+epoch 11, step 32199, loss: 0.621837.
+epoch 11, step 32299, loss: 1.060458.
+epoch 11, step 32399, loss: 1.103899.
+epoch 11, step 32499, loss: 1.332173.
+epoch 11, step 32599, loss: 0.520999.
+epoch 11, step 32699, loss: 1.389096.
+epoch 11, step 32799, loss: 0.781758.
+epoch 11, step 32899, loss: 0.718412.
+epoch 11, step 32999, loss: 0.476775.
+Saving model to ./exp/20200509/kaldi_lda_100_lessnormalized/nnet/kaldi_lda_100_lessnormalized_epoch_11,finished.
+Calculating the valid_eer and valid_dcf.
+valid_eer: 1.689655172413793, 
+valid_minDCF(p-target=0.01): 0.2502463054187165,
+valid_minDCF(p-target=0.001): 0.3956403940887104
+----------------------------------------
+epoch 12, step 33099, loss: 1.073650.
+epoch 12, step 33199, loss: 0.776787.
+epoch 12, step 33299, loss: 0.997315.
+epoch 12, step 33399, loss: 1.223763.
+epoch 12, step 33499, loss: 0.748146.
+epoch 12, step 33599, loss: 0.883840.
+epoch 12, step 33699, loss: 0.683048.
+epoch 12, step 33799, loss: 1.224097.
+epoch 12, step 33899, loss: 1.173309.
+epoch 12, step 33999, loss: 0.674383.
+epoch 12, step 34099, loss: 1.180199.
+epoch 12, step 34199, loss: 1.272139.
+epoch 12, step 34299, loss: 0.597589.
+epoch 12, step 34399, loss: 1.389207.
+epoch 12, step 34499, loss: 0.988773.
+epoch 12, step 34599, loss: 0.799957.
+epoch 12, step 34699, loss: 1.023290.
+epoch 12, step 34799, loss: 1.283489.
+epoch 12, step 34899, loss: 0.294931.
+epoch 12, step 34999, loss: 0.776081.
+epoch 12, step 35099, loss: 0.729288.
+epoch 12, step 35199, loss: 0.654414.
+epoch 12, step 35299, loss: 1.458214.
+epoch 12, step 35399, loss: 0.779980.
+epoch 12, step 35499, loss: 0.764862.
+epoch 12, step 35599, loss: 0.828477.
+epoch 12, step 35699, loss: 0.561141.
+epoch 12, step 35799, loss: 1.493620.
+epoch 12, step 35899, loss: 0.309314.
+epoch 12, step 35999, loss: 0.411190.
+Saving model to ./exp/20200509/kaldi_lda_100_lessnormalized/nnet/kaldi_lda_100_lessnormalized_epoch_12,finished.
+Calculating the valid_eer and valid_dcf.
+valid_eer: 1.5172413793103448, 
+valid_minDCF(p-target=0.01): 0.19756157635467814,
+valid_minDCF(p-target=0.001): 0.3262315270936066
+----------------------------------------
+epoch 13, step 36099, loss: 1.038148.
+epoch 13, step 36199, loss: 1.063115.
+epoch 13, step 36299, loss: 1.139405.
+epoch 13, step 36399, loss: 0.950193.
+epoch 13, step 36499, loss: 0.748078.
+epoch 13, step 36599, loss: 0.759819.
+epoch 13, step 36699, loss: 0.537776.
+epoch 13, step 36799, loss: 0.614818.
+epoch 13, step 36899, loss: 0.775778.
+epoch 13, step 36999, loss: 0.823540.
+epoch 13, step 37099, loss: 0.734263.
+epoch 13, step 37199, loss: 0.976461.
+epoch 13, step 37299, loss: 0.535743.
+epoch 13, step 37399, loss: 0.956262.
+epoch 13, step 37499, loss: 1.202313.
+epoch 13, step 37599, loss: 0.703117.
+epoch 13, step 37699, loss: 0.916710.
+epoch 13, step 37799, loss: 1.123752.
+epoch 13, step 37899, loss: 0.477124.
+epoch 13, step 37999, loss: 1.237135.
+epoch 13, step 38099, loss: 0.603670.
+epoch 13, step 38199, loss: 0.264723.
+epoch 13, step 38299, loss: 0.662535.
+epoch 13, step 38399, loss: 1.083528.
+epoch 13, step 38499, loss: 1.748922.
+epoch 13, step 38599, loss: 0.625731.
+epoch 13, step 38699, loss: 0.826058.
+epoch 13, step 38799, loss: 0.877977.
+epoch 13, step 38899, loss: 1.324906.
+epoch 13, step 38999, loss: 0.751628.
+Saving model to ./exp/20200509/kaldi_lda_100_lessnormalized/nnet/kaldi_lda_100_lessnormalized_epoch_13,finished.
+Calculating the valid_eer and valid_dcf.
+valid_eer: 1.5517241379310345, 
+valid_minDCF(p-target=0.01): 0.19172413793103682,
+valid_minDCF(p-target=0.001): 0.31310344827586206
+----------------------------------------
+epoch 14, step 39099, loss: 0.605699.
+epoch 14, step 39199, loss: 0.648016.
+epoch 14, step 39299, loss: 1.032998.
+epoch 14, step 39399, loss: 0.751535.
+epoch 14, step 39499, loss: 1.038845.
+epoch 14, step 39599, loss: 1.360251.
+epoch 14, step 39699, loss: 0.420646.
+epoch 14, step 39799, loss: 0.877056.
+epoch 14, step 39899, loss: 1.148324.
+epoch 14, step 39999, loss: 0.064901.
+epoch 14, step 40099, loss: 1.465690.
+epoch 14, step 40199, loss: 0.505098.
+epoch 14, step 40299, loss: 0.389965.
+epoch 14, step 40399, loss: 0.945798.
+epoch 14, step 40499, loss: 0.651028.
+epoch 14, step 40599, loss: 0.710172.
+epoch 14, step 40699, loss: 1.027844.
+epoch 14, step 40799, loss: 1.468123.
+epoch 14, step 40899, loss: 0.883725.
+epoch 14, step 40999, loss: 0.579707.
+epoch 14, step 41099, loss: 0.351474.
+epoch 14, step 41199, loss: 0.857790.
+epoch 14, step 41299, loss: 0.744867.
+epoch 14, step 41399, loss: 1.072730.
+epoch 14, step 41499, loss: 0.772964.
+epoch 14, step 41599, loss: 0.947822.
+epoch 14, step 41699, loss: 1.256743.
+epoch 14, step 41799, loss: 0.668035.
+epoch 14, step 41899, loss: 0.636145.
+epoch 14, step 41999, loss: 1.018089.
+Saving model to ./exp/20200509/kaldi_lda_100_lessnormalized/nnet/kaldi_lda_100_lessnormalized_epoch_14,finished.
+Calculating the valid_eer and valid_dcf.
+valid_eer: 1.4137931034482758, 
+valid_minDCF(p-target=0.01): 0.17625615763546618,
+valid_minDCF(p-target=0.001): 0.27472906403937886
+----------------------------------------
+epoch 15, step 42099, loss: 0.779098.
+epoch 15, step 42199, loss: 1.263189.
+epoch 15, step 42299, loss: 1.020521.
+epoch 15, step 42399, loss: 0.538395.
+epoch 15, step 42499, loss: 0.333632.
+epoch 15, step 42599, loss: 0.767589.
+epoch 15, step 42699, loss: 0.683591.
+epoch 15, step 42799, loss: 0.748954.
+epoch 15, step 42899, loss: 1.375157.
+epoch 15, step 42999, loss: 1.056794.
+epoch 15, step 43099, loss: 0.867727.
+epoch 15, step 43199, loss: 0.829901.
+epoch 15, step 43299, loss: 0.780892.
+epoch 15, step 43399, loss: 0.521293.
+epoch 15, step 43499, loss: 0.886142.
+epoch 15, step 43599, loss: 1.322723.
+epoch 15, step 43699, loss: 0.632292.
+epoch 15, step 43799, loss: 1.181447.
+epoch 15, step 43899, loss: 0.660107.
+epoch 15, step 43999, loss: 0.678189.
+epoch 15, step 44099, loss: 1.391112.
+epoch 15, step 44199, loss: 0.644583.
+epoch 15, step 44299, loss: 1.027501.
+epoch 15, step 44399, loss: 0.641445.
+epoch 15, step 44499, loss: 0.805954.
+epoch 15, step 44599, loss: 1.015173.
+epoch 15, step 44699, loss: 1.206216.
+epoch 15, step 44799, loss: 0.903961.
+epoch 15, step 44899, loss: 1.157979.
+epoch 15, step 44999, loss: 1.130415.
+Saving model to ./exp/20200509/kaldi_lda_100_lessnormalized/nnet/kaldi_lda_100_lessnormalized_epoch_15,finished.
+Calculating the valid_eer and valid_dcf.
+valid_eer: 1.4137931034482758, 
+valid_minDCF(p-target=0.01): 0.13817733990147396,
+valid_minDCF(p-target=0.001): 0.2142610837438828
+----------------------------------------
+epoch 16, step 45099, loss: 0.203074.
+epoch 16, step 45199, loss: 0.665792.
+epoch 16, step 45299, loss: 0.586957.
+epoch 16, step 45399, loss: 1.022176.
+epoch 16, step 45499, loss: 1.052840.
+epoch 16, step 45599, loss: 0.870285.
+epoch 16, step 45699, loss: 1.072042.
+epoch 16, step 45799, loss: 1.069288.
+epoch 16, step 45899, loss: 0.797388.
+epoch 16, step 45999, loss: 1.152487.
+epoch 16, step 46099, loss: 0.884605.
+epoch 16, step 46199, loss: 0.976486.
+epoch 16, step 46299, loss: 0.698317.
+epoch 16, step 46399, loss: 0.902305.
+epoch 16, step 46499, loss: 0.903340.
+epoch 16, step 46599, loss: 0.681899.
+epoch 16, step 46699, loss: 0.826211.
+epoch 16, step 46799, loss: 1.043265.
+epoch 16, step 46899, loss: 0.572433.
+epoch 16, step 46999, loss: 1.324190.
+epoch 16, step 47099, loss: 0.572214.
+epoch 16, step 47199, loss: 0.449103.
+epoch 16, step 47299, loss: 1.072625.
+epoch 16, step 47399, loss: 0.648082.
+epoch 16, step 47499, loss: 0.723596.
+epoch 16, step 47599, loss: 0.605897.
+epoch 16, step 47699, loss: 0.723536.
+epoch 16, step 47799, loss: 1.042378.
+epoch 16, step 47899, loss: 1.565849.
+epoch 16, step 47999, loss: 0.000000.
+Saving model to ./exp/20200509/kaldi_lda_100_lessnormalized/nnet/kaldi_lda_100_lessnormalized_epoch_16,finished.
+Calculating the valid_eer and valid_dcf.
+valid_eer: 1.4482758620689655, 
+valid_minDCF(p-target=0.01): 0.12805418719211628,
+valid_minDCF(p-target=0.001): 0.19655172413793104
+----------------------------------------
+epoch 17, step 48099, loss: 1.032483.
+epoch 17, step 48199, loss: 0.913320.
+epoch 17, step 48299, loss: 0.944218.
+epoch 17, step 48399, loss: 0.898541.
+epoch 17, step 48499, loss: 1.296090.
+epoch 17, step 48599, loss: 0.368304.
+epoch 17, step 48699, loss: 0.518501.
+epoch 17, step 48799, loss: 1.119611.
+epoch 17, step 48899, loss: 1.028149.
+epoch 17, step 48999, loss: 1.102308.
+epoch 17, step 49099, loss: 0.841615.
+epoch 17, step 49199, loss: 1.261540.
+epoch 17, step 49299, loss: 0.656775.
+epoch 17, step 49399, loss: 0.419179.
+epoch 17, step 49499, loss: 1.326250.
+epoch 17, step 49599, loss: 0.632869.
+epoch 17, step 49699, loss: 0.761882.
+epoch 17, step 49799, loss: 0.609984.
+epoch 17, step 49899, loss: 0.920287.
+epoch 17, step 49999, loss: 0.835258.
+epoch 17, step 50099, loss: 0.766134.
+epoch 17, step 50199, loss: 0.436829.
+epoch 17, step 50299, loss: 0.780741.
+epoch 17, step 50399, loss: 1.241320.
+epoch 17, step 50499, loss: 1.456104.
+epoch 17, step 50599, loss: 0.921698.
+epoch 17, step 50699, loss: 0.000000.
+epoch 17, step 50799, loss: 0.540991.
+epoch 17, step 50899, loss: 0.346304.
+epoch 17, step 50999, loss: 0.396319.
+Saving model to ./exp/20200509/kaldi_lda_100_lessnormalized/nnet/kaldi_lda_100_lessnormalized_epoch_17,finished.
+Calculating the valid_eer and valid_dcf.
+valid_eer: 1.3103448275862069, 
+valid_minDCF(p-target=0.01): 0.1541379310344839,
+valid_minDCF(p-target=0.001): 0.24783251231524092
+----------------------------------------
+epoch 18, step 51099, loss: 0.985753.
+epoch 18, step 51199, loss: 1.037004.
+epoch 18, step 51299, loss: 0.448748.
+epoch 18, step 51399, loss: 1.311258.
+epoch 18, step 51499, loss: 0.898273.
+epoch 18, step 51599, loss: 0.675881.
+epoch 18, step 51699, loss: 0.810975.
+epoch 18, step 51799, loss: 0.467214.
+epoch 18, step 51899, loss: 1.066867.
+epoch 18, step 51999, loss: 0.995450.
+epoch 18, step 52099, loss: 0.364656.
+epoch 18, step 52199, loss: 0.890749.
+epoch 18, step 52299, loss: 1.036841.
+epoch 18, step 52399, loss: 0.787176.
+epoch 18, step 52499, loss: 1.908668.
+epoch 18, step 52599, loss: 0.823832.
+epoch 18, step 52699, loss: 0.593613.
+epoch 18, step 52799, loss: 0.788828.
+epoch 18, step 52899, loss: 0.211700.
+epoch 18, step 52999, loss: 0.592167.
+epoch 18, step 53099, loss: 0.570052.
+epoch 18, step 53199, loss: 0.978671.
+epoch 18, step 53299, loss: 1.236013.
+epoch 18, step 53399, loss: 0.688583.
+epoch 18, step 53499, loss: 0.942698.
+epoch 18, step 53599, loss: 0.461261.
+epoch 18, step 53699, loss: 0.663552.
+epoch 18, step 53799, loss: 1.025667.
+epoch 18, step 53899, loss: 0.975061.
+epoch 18, step 53999, loss: 0.707032.
+Saving model to ./exp/20200509/kaldi_lda_100_lessnormalized/nnet/kaldi_lda_100_lessnormalized_epoch_18,finished.
+Calculating the valid_eer and valid_dcf.
+valid_eer: 1.3793103448275863, 
+valid_minDCF(p-target=0.01): 0.1524384236453254,
+valid_minDCF(p-target=0.001): 0.22482758620689655
+----------------------------------------
+epoch 19, step 54099, loss: 0.898373.
+epoch 19, step 54199, loss: 1.205005.
+epoch 19, step 54299, loss: 0.870620.
+epoch 19, step 54399, loss: 1.087659.
+epoch 19, step 54499, loss: 1.845908.
+epoch 19, step 54599, loss: 1.090570.
+epoch 19, step 54699, loss: 0.663864.
+epoch 19, step 54799, loss: 0.936798.
+epoch 19, step 54899, loss: 0.765119.
+epoch 19, step 54999, loss: 0.541686.
+epoch 19, step 55099, loss: 0.369118.
+epoch 19, step 55199, loss: 0.674117.
+epoch 19, step 55299, loss: 0.854787.
+epoch 19, step 55399, loss: 0.432922.
+epoch 19, step 55499, loss: 1.112325.
+epoch 19, step 55599, loss: 0.421276.
+epoch 19, step 55699, loss: 0.549481.
+epoch 19, step 55799, loss: 0.695558.
+epoch 19, step 55899, loss: 0.971013.
+epoch 19, step 55999, loss: 1.224774.
+epoch 19, step 56099, loss: 1.187957.
+epoch 19, step 56199, loss: 0.462972.
+epoch 19, step 56299, loss: 0.952571.
+epoch 19, step 56399, loss: 0.842371.
+epoch 19, step 56499, loss: 1.264384.
+epoch 19, step 56599, loss: 1.101336.
+epoch 19, step 56699, loss: 1.169722.
+epoch 19, step 56799, loss: 0.813777.
+epoch 19, step 56899, loss: 0.840431.
+epoch 19, step 56999, loss: 0.903802.
+Saving model to ./exp/20200509/kaldi_lda_100_lessnormalized/nnet/kaldi_lda_100_lessnormalized_epoch_19,finished.
+Calculating the valid_eer and valid_dcf.
+valid_eer: 1.5172413793103448, 
+valid_minDCF(p-target=0.01): 0.20593596059113636,
+valid_minDCF(p-target=0.001): 0.3618472906404345
+----------------------------------------
+epoch 20, step 57099, loss: 1.273192.
+epoch 20, step 57199, loss: 1.048819.
+epoch 20, step 57299, loss: 1.041451.
+epoch 20, step 57399, loss: 0.411355.
+epoch 20, step 57499, loss: 1.517064.
+epoch 20, step 57599, loss: 0.869667.
+epoch 20, step 57699, loss: 0.607454.
+epoch 20, step 57799, loss: 0.911296.
+epoch 20, step 57899, loss: 0.677601.
+epoch 20, step 57999, loss: 0.817737.
+epoch 20, step 58099, loss: 0.803724.
+epoch 20, step 58199, loss: 1.034690.
+epoch 20, step 58299, loss: 0.688741.
+epoch 20, step 58399, loss: 0.807203.
+epoch 20, step 58499, loss: 0.495542.
+epoch 20, step 58599, loss: 0.747435.
+epoch 20, step 58699, loss: 0.715074.
+epoch 20, step 58799, loss: 1.065849.
+epoch 20, step 58899, loss: 0.842778.
+epoch 20, step 58999, loss: 1.259044.
+epoch 20, step 59099, loss: 0.866162.
+epoch 20, step 59199, loss: 1.298640.
+epoch 20, step 59299, loss: 1.230912.
+epoch 20, step 59399, loss: 1.035344.
+epoch 20, step 59499, loss: 1.174847.
+epoch 20, step 59599, loss: 1.078491.
+epoch 20, step 59699, loss: 0.803990.
+epoch 20, step 59799, loss: 0.991994.
+epoch 20, step 59899, loss: 1.227801.
+epoch 20, step 59999, loss: 0.704062.
+Saving model to ./exp/20200509/kaldi_lda_100_lessnormalized/nnet/kaldi_lda_100_lessnormalized_epoch_20,finished.
+Calculating the valid_eer and valid_dcf.
+valid_eer: 1.3793103448275863, 
+valid_minDCF(p-target=0.01): 0.1707881773398967,
+valid_minDCF(p-target=0.001): 0.28620689655172415
+----------------------------------------
+epoch 21, step 60099, loss: 1.202296.
+epoch 21, step 60199, loss: 0.756875.
+epoch 21, step 60299, loss: 0.709523.
+epoch 21, step 60399, loss: 1.055765.
+epoch 21, step 60499, loss: 0.843780.
+epoch 21, step 60599, loss: 0.665497.
+epoch 21, step 60699, loss: 0.986663.
+epoch 21, step 60799, loss: 0.977659.
+epoch 21, step 60899, loss: 0.737607.
+epoch 21, step 60999, loss: 1.102515.
+epoch 21, step 61099, loss: 0.677623.
+epoch 21, step 61199, loss: 1.040166.
+epoch 21, step 61299, loss: 0.620658.
+epoch 21, step 61399, loss: 1.110835.
+epoch 21, step 61499, loss: 0.592090.
+epoch 21, step 61599, loss: 0.625108.
+epoch 21, step 61699, loss: 0.914363.
+epoch 21, step 61799, loss: 0.496922.
+epoch 21, step 61899, loss: 0.978946.
+epoch 21, step 61999, loss: 1.113937.
+epoch 21, step 62099, loss: 0.923469.
+epoch 21, step 62199, loss: 0.430012.
+epoch 21, step 62299, loss: 0.162650.
+epoch 21, step 62399, loss: 1.368014.
+epoch 21, step 62499, loss: 1.238779.
+epoch 21, step 62599, loss: 1.217240.
+epoch 21, step 62699, loss: 0.100411.
+epoch 21, step 62799, loss: 2.003656.
+epoch 21, step 62899, loss: 0.835424.
+epoch 21, step 62999, loss: 1.128865.
+Saving model to ./exp/20200509/kaldi_lda_100_lessnormalized/nnet/kaldi_lda_100_lessnormalized_epoch_21,finished.
+Calculating the valid_eer and valid_dcf.
+valid_eer: 1.3793103448275863, 
+valid_minDCF(p-target=0.01): 0.1783743842364484,
+valid_minDCF(p-target=0.001): 0.3112807881773099
+----------------------------------------
+epoch 22, step 63099, loss: 0.689197.
+epoch 22, step 63199, loss: 0.794721.
+epoch 22, step 63299, loss: 0.784077.
+epoch 22, step 63399, loss: 1.045566.
+epoch 22, step 63499, loss: 0.738886.
+epoch 22, step 63599, loss: 0.331774.
+epoch 22, step 63699, loss: 0.760114.
+epoch 22, step 63799, loss: 0.418376.
+epoch 22, step 63899, loss: 0.957147.
+epoch 22, step 63999, loss: 0.792436.
+epoch 22, step 64099, loss: 0.365253.
+epoch 22, step 64199, loss: 0.703232.
+epoch 22, step 64299, loss: 0.638282.
+epoch 22, step 64399, loss: 0.980738.
+epoch 22, step 64499, loss: 0.584393.
+epoch 22, step 64599, loss: 1.237303.
+epoch 22, step 64699, loss: 0.962902.
+epoch 22, step 64799, loss: 0.816692.
+epoch 22, step 64899, loss: 0.865102.
+epoch 22, step 64999, loss: 0.870446.
+epoch 22, step 65099, loss: 0.725281.
+epoch 22, step 65199, loss: 1.185269.
+epoch 22, step 65299, loss: 1.283094.
+epoch 22, step 65399, loss: 0.370401.
+epoch 22, step 65499, loss: 0.536264.
+epoch 22, step 65599, loss: 0.776116.
+epoch 22, step 65699, loss: 0.634708.
+epoch 22, step 65799, loss: 0.916263.
+epoch 22, step 65899, loss: 0.797691.
+epoch 22, step 65999, loss: 1.033881.
+Saving model to ./exp/20200509/kaldi_lda_100_lessnormalized/nnet/kaldi_lda_100_lessnormalized_epoch_22,finished.
+Calculating the valid_eer and valid_dcf.
+valid_eer: 1.2758620689655173, 
+valid_minDCF(p-target=0.01): 0.17354679802955186,
+valid_minDCF(p-target=0.001): 0.2949507389162966
+----------------------------------------
+epoch 23, step 66099, loss: 0.815020.
+epoch 23, step 66199, loss: 1.207805.
+epoch 23, step 66299, loss: 1.080328.
+epoch 23, step 66399, loss: 0.747501.
+epoch 23, step 66499, loss: 0.808218.
+epoch 23, step 66599, loss: 0.290540.
+epoch 23, step 66699, loss: 0.933877.
+epoch 23, step 66799, loss: 0.000000.
+epoch 23, step 66899, loss: 0.686032.
+epoch 23, step 66999, loss: 0.927946.
+epoch 23, step 67099, loss: 0.810342.
+epoch 23, step 67199, loss: 0.620616.
+epoch 23, step 67299, loss: 0.757147.
+epoch 23, step 67399, loss: 1.245878.
+epoch 23, step 67499, loss: 0.869372.
+epoch 23, step 67599, loss: 0.940059.
+epoch 23, step 67699, loss: 1.074202.
+epoch 23, step 67799, loss: 0.570731.
+epoch 23, step 67899, loss: 1.249150.
+epoch 23, step 67999, loss: 0.761077.
+epoch 23, step 68099, loss: 0.332553.
+epoch 23, step 68199, loss: 0.489131.
+epoch 23, step 68299, loss: 1.199081.
+epoch 23, step 68399, loss: 0.156865.
+epoch 23, step 68499, loss: 0.892703.
+epoch 23, step 68599, loss: 0.947047.
+epoch 23, step 68699, loss: 1.671762.
+epoch 23, step 68799, loss: 1.246577.
+epoch 23, step 68899, loss: 0.400977.
+epoch 23, step 68999, loss: 0.862320.
+Saving model to ./exp/20200509/kaldi_lda_100_lessnormalized/nnet/kaldi_lda_100_lessnormalized_epoch_23,finished.
+Calculating the valid_eer and valid_dcf.
+valid_eer: 1.5517241379310345, 
+valid_minDCF(p-target=0.01): 0.16729064039408686,
+valid_minDCF(p-target=0.001): 0.24068965517241378
+----------------------------------------
+epoch 24, step 69099, loss: 0.593442.
+epoch 24, step 69199, loss: 0.891557.
+epoch 24, step 69299, loss: 0.863643.
+epoch 24, step 69399, loss: 0.693817.
+epoch 24, step 69499, loss: 0.855491.
+epoch 24, step 69599, loss: 0.692344.
+epoch 24, step 69699, loss: 1.362543.
+epoch 24, step 69799, loss: 0.740025.
+epoch 24, step 69899, loss: 1.137018.
+epoch 24, step 69999, loss: 0.613336.
+epoch 24, step 70099, loss: 0.356470.
+epoch 24, step 70199, loss: 0.847754.
+epoch 24, step 70299, loss: 0.923710.
+epoch 24, step 70399, loss: 0.543890.
+epoch 24, step 70499, loss: 1.933474.
+epoch 24, step 70599, loss: 0.830543.
+epoch 24, step 70699, loss: 1.076568.
+epoch 24, step 70799, loss: 0.843101.
+epoch 24, step 70899, loss: 0.504299.
+epoch 24, step 70999, loss: 1.280056.
+epoch 24, step 71099, loss: 1.142203.
+epoch 24, step 71199, loss: 1.218620.
+epoch 24, step 71299, loss: 0.710427.
+epoch 24, step 71399, loss: 0.398025.
+epoch 24, step 71499, loss: 0.275999.
+epoch 24, step 71599, loss: 0.714888.
+epoch 24, step 71699, loss: 0.914198.
+epoch 24, step 71799, loss: 0.929727.
+epoch 24, step 71899, loss: 0.879129.
+epoch 24, step 71999, loss: 0.835630.
+Saving model to ./exp/20200509/kaldi_lda_100_lessnormalized/nnet/kaldi_lda_100_lessnormalized_epoch_24,finished.
+Calculating the valid_eer and valid_dcf.
+valid_eer: 1.4482758620689655, 
+valid_minDCF(p-target=0.01): 0.15197044334974982,
+valid_minDCF(p-target=0.001): 0.2259852216749173
+----------------------------------------
+epoch 25, step 72099, loss: 1.004588.
+epoch 25, step 72199, loss: 0.358476.
+epoch 25, step 72299, loss: 0.419887.
+epoch 25, step 72399, loss: 0.867454.
+epoch 25, step 72499, loss: 0.470057.
+epoch 25, step 72599, loss: 0.459518.
+epoch 25, step 72699, loss: 1.036823.
+epoch 25, step 72799, loss: 1.490034.
+epoch 25, step 72899, loss: 0.526644.
+epoch 25, step 72999, loss: 0.811279.
+epoch 25, step 73099, loss: 0.844304.
+epoch 25, step 73199, loss: 0.771383.
+epoch 25, step 73299, loss: 0.913219.
+epoch 25, step 73399, loss: 0.941507.
+epoch 25, step 73499, loss: 0.818832.
+epoch 25, step 73599, loss: 1.077995.
+epoch 25, step 73699, loss: 0.496471.
+epoch 25, step 73799, loss: 1.227791.
+epoch 25, step 73899, loss: 0.409145.
+epoch 25, step 73999, loss: 0.737598.
+epoch 25, step 74099, loss: 0.779696.
+epoch 25, step 74199, loss: 1.115454.
+epoch 25, step 74299, loss: 0.873136.
+epoch 25, step 74399, loss: 1.150784.
+epoch 25, step 74499, loss: 1.484675.
+epoch 25, step 74599, loss: 0.824090.
+epoch 25, step 74699, loss: 0.464766.
+epoch 25, step 74799, loss: 1.089560.
+epoch 25, step 74899, loss: 1.049795.
+epoch 25, step 74999, loss: 0.566843.
+Saving model to ./exp/20200509/kaldi_lda_100_lessnormalized/nnet/kaldi_lda_100_lessnormalized_epoch_25,finished.
+Calculating the valid_eer and valid_dcf.
+valid_eer: 1.4482758620689655, 
+valid_minDCF(p-target=0.01): 0.15004926108374203,
+valid_minDCF(p-target=0.001): 0.26253694581284837
+----------------------------------------
+epoch 26, step 75099, loss: 0.950121.
+epoch 26, step 75199, loss: 0.861741.
+epoch 26, step 75299, loss: 0.662876.
+epoch 26, step 75399, loss: 1.341691.
+epoch 26, step 75499, loss: 1.217341.
+epoch 26, step 75599, loss: 1.059777.
+epoch 26, step 75699, loss: 0.616009.
+epoch 26, step 75799, loss: 0.633450.
+epoch 26, step 75899, loss: 0.583924.
+epoch 26, step 75999, loss: 0.904606.
+epoch 26, step 76099, loss: 0.373120.
+epoch 26, step 76199, loss: 0.812517.
+epoch 26, step 76299, loss: 1.026655.
+epoch 26, step 76399, loss: 0.841322.
+epoch 26, step 76499, loss: 0.621158.
+epoch 26, step 76599, loss: 0.915762.
+epoch 26, step 76699, loss: 0.790102.
+epoch 26, step 76799, loss: 0.782243.
+epoch 26, step 76899, loss: 0.351061.
+epoch 26, step 76999, loss: 0.856264.
+epoch 26, step 77099, loss: 1.158725.
+epoch 26, step 77199, loss: 1.107267.
+epoch 26, step 77299, loss: 0.735109.
+epoch 26, step 77399, loss: 0.756140.
+epoch 26, step 77499, loss: 0.656775.
+epoch 26, step 77599, loss: 0.690553.
+epoch 26, step 77699, loss: 0.519127.
+epoch 26, step 77799, loss: 1.223241.
+epoch 26, step 77899, loss: 0.803743.
+epoch 26, step 77999, loss: 0.805398.
+Saving model to ./exp/20200509/kaldi_lda_100_lessnormalized/nnet/kaldi_lda_100_lessnormalized_epoch_26,finished.
+Calculating the valid_eer and valid_dcf.
+valid_eer: 1.5862068965517242, 
+valid_minDCF(p-target=0.01): 0.22669950738916578,
+valid_minDCF(p-target=0.001): 0.3597783251231932
+----------------------------------------
+epoch 27, step 78099, loss: 2.170211.
+epoch 27, step 78199, loss: 1.170188.
+epoch 27, step 78299, loss: 1.097818.
+epoch 27, step 78399, loss: 0.561044.
+epoch 27, step 78499, loss: 0.873550.
+epoch 27, step 78599, loss: 0.378312.
+epoch 27, step 78699, loss: 0.753249.
+epoch 27, step 78799, loss: 0.522746.
+epoch 27, step 78899, loss: 0.847381.
+epoch 27, step 78999, loss: 1.703853.
+epoch 27, step 79099, loss: 0.861509.
+epoch 27, step 79199, loss: 0.845196.
+epoch 27, step 79299, loss: 0.787680.
+epoch 27, step 79399, loss: 0.000000.
+epoch 27, step 79499, loss: 0.503432.
+epoch 27, step 79599, loss: 1.251500.
+epoch 27, step 79699, loss: 0.615234.
+epoch 27, step 79799, loss: 0.436643.
+epoch 27, step 79899, loss: 0.852574.
+epoch 27, step 79999, loss: 1.420392.
+epoch 27, step 80099, loss: 0.906555.
+epoch 27, step 80199, loss: 0.911495.
+epoch 27, step 80299, loss: 0.418610.
+epoch 27, step 80399, loss: 0.699775.
+epoch 27, step 80499, loss: 0.789142.
+epoch 27, step 80599, loss: 0.857002.
+epoch 27, step 80699, loss: 0.452760.
+epoch 27, step 80799, loss: 1.064552.
+epoch 27, step 80899, loss: 1.101789.
+epoch 27, step 80999, loss: 0.603139.
+Saving model to ./exp/20200509/kaldi_lda_100_lessnormalized/nnet/kaldi_lda_100_lessnormalized_epoch_27,finished.
+Calculating the valid_eer and valid_dcf.
+valid_eer: 1.3793103448275863, 
+valid_minDCF(p-target=0.01): 0.16886699507388891,
+valid_minDCF(p-target=0.001): 0.25908866995077934
+----------------------------------------
+Haven't imporved for 5 epochs, down the lr to [2.5e-05]
+epoch 28, step 81099, loss: 1.298653.
+epoch 28, step 81199, loss: 0.669351.
+epoch 28, step 81299, loss: 1.166428.
+epoch 28, step 81399, loss: 0.576656.
+epoch 28, step 81499, loss: 0.590587.
+epoch 28, step 81599, loss: 0.416535.
+epoch 28, step 81699, loss: 0.265917.
+epoch 28, step 81799, loss: 0.413544.
+epoch 28, step 81899, loss: 0.358114.
+epoch 28, step 81999, loss: 1.265908.
+epoch 28, step 82099, loss: 0.400493.
+epoch 28, step 82199, loss: 1.256071.
+epoch 28, step 82299, loss: 1.110515.
+epoch 28, step 82399, loss: 1.335921.
+epoch 28, step 82499, loss: 0.562951.
+epoch 28, step 82599, loss: 0.606585.
+epoch 28, step 82699, loss: 0.844955.
+epoch 28, step 82799, loss: 0.976395.
+epoch 28, step 82899, loss: 0.905591.
+epoch 28, step 82999, loss: 1.247730.
+epoch 28, step 83099, loss: 0.718992.
+epoch 28, step 83199, loss: 0.733608.
+epoch 28, step 83299, loss: 0.492745.
+epoch 28, step 83399, loss: 1.483570.
+epoch 28, step 83499, loss: 0.981235.
+epoch 28, step 83599, loss: 0.397692.
+epoch 28, step 83699, loss: 0.405380.
+epoch 28, step 83799, loss: 0.650855.
+epoch 28, step 83899, loss: 1.389552.
+epoch 28, step 83999, loss: 0.558428.
+Saving model to ./exp/20200509/kaldi_lda_100_lessnormalized/nnet/kaldi_lda_100_lessnormalized_epoch_28,finished.
+Calculating the valid_eer and valid_dcf.
+valid_eer: 1.5172413793103448, 
+valid_minDCF(p-target=0.01): 0.19492610837437946,
+valid_minDCF(p-target=0.001): 0.36209359605912367
+----------------------------------------
+epoch 29, step 84099, loss: 0.703235.
+epoch 29, step 84199, loss: 0.916987.
+epoch 29, step 84299, loss: 0.863571.
+epoch 29, step 84399, loss: 0.729462.
+epoch 29, step 84499, loss: 0.820657.
+epoch 29, step 84599, loss: 1.369751.
+epoch 29, step 84699, loss: 0.718667.
+epoch 29, step 84799, loss: 0.905487.
+epoch 29, step 84899, loss: 0.815699.
+epoch 29, step 84999, loss: 1.019552.
+epoch 29, step 85099, loss: 0.495969.
+epoch 29, step 85199, loss: 0.612137.
+epoch 29, step 85299, loss: 0.231104.
+epoch 29, step 85399, loss: 0.594096.
+epoch 29, step 85499, loss: 0.903363.
+epoch 29, step 85599, loss: 0.590689.
+epoch 29, step 85699, loss: 0.683505.
+epoch 29, step 85799, loss: 1.492239.
+epoch 29, step 85899, loss: 1.031570.
+epoch 29, step 85999, loss: 0.829954.
+epoch 29, step 86099, loss: 0.519198.
+epoch 29, step 86199, loss: 0.633707.
+epoch 29, step 86299, loss: 0.436209.
+epoch 29, step 86399, loss: 0.562094.
+epoch 29, step 86499, loss: 1.201519.
+epoch 29, step 86599, loss: 0.687771.
+epoch 29, step 86699, loss: 0.673934.
+epoch 29, step 86799, loss: 0.567311.
+epoch 29, step 86899, loss: 0.894432.
+epoch 29, step 86999, loss: 0.752066.
+Saving model to ./exp/20200509/kaldi_lda_100_lessnormalized/nnet/kaldi_lda_100_lessnormalized_epoch_29,finished.
+Calculating the valid_eer and valid_dcf.
+valid_eer: 1.4482758620689655, 
+valid_minDCF(p-target=0.01): 0.1695566502463027,
+valid_minDCF(p-target=0.001): 0.3165763546798134
+----------------------------------------
+epoch 30, step 87099, loss: 0.490984.
+epoch 30, step 87199, loss: 1.094512.
+epoch 30, step 87299, loss: 0.974815.
+epoch 30, step 87399, loss: 0.695376.
+epoch 30, step 87499, loss: 0.852461.
+epoch 30, step 87599, loss: 1.579483.
+epoch 30, step 87699, loss: 0.366784.
+epoch 30, step 87799, loss: 0.564567.
+epoch 30, step 87899, loss: 0.996647.
+epoch 30, step 87999, loss: 1.082905.
+epoch 30, step 88099, loss: 0.844900.
+epoch 30, step 88199, loss: 0.863960.
+epoch 30, step 88299, loss: 0.686529.
+epoch 30, step 88399, loss: 1.159180.
+epoch 30, step 88499, loss: 0.235022.
+epoch 30, step 88599, loss: 0.920342.
+epoch 30, step 88699, loss: 0.634978.
+epoch 30, step 88799, loss: 0.732791.
+epoch 30, step 88899, loss: 1.328442.
+epoch 30, step 88999, loss: 0.523592.
+epoch 30, step 89099, loss: 0.603132.
+epoch 30, step 89199, loss: 0.951856.
+epoch 30, step 89299, loss: 0.839755.
+epoch 30, step 89399, loss: 0.635687.
+epoch 30, step 89499, loss: 0.851174.
+epoch 30, step 89599, loss: 0.801526.
+epoch 30, step 89699, loss: 0.150169.
+epoch 30, step 89799, loss: 0.803043.
+epoch 30, step 89899, loss: 1.068406.
+epoch 30, step 89999, loss: 0.660024.
+Saving model to ./exp/20200509/kaldi_lda_100_lessnormalized/nnet/kaldi_lda_100_lessnormalized_epoch_30,finished.
+Calculating the valid_eer and valid_dcf.
+valid_eer: 1.3793103448275863, 
+valid_minDCF(p-target=0.01): 0.1368965517241391,
+valid_minDCF(p-target=0.001): 0.233571428571469
+----------------------------------------
+epoch 31, step 90099, loss: 0.761177.
+epoch 31, step 90199, loss: 0.816304.
+epoch 31, step 90299, loss: 0.898934.
+epoch 31, step 90399, loss: 0.822943.
+epoch 31, step 90499, loss: 0.582725.
+epoch 31, step 90599, loss: 0.997197.
+epoch 31, step 90699, loss: 0.812845.
+epoch 31, step 90799, loss: 0.748197.
+epoch 31, step 90899, loss: 0.775999.
+epoch 31, step 90999, loss: 0.518289.
+epoch 31, step 91099, loss: 0.790866.
+epoch 31, step 91199, loss: 1.608098.
+epoch 31, step 91299, loss: 0.849996.
+epoch 31, step 91399, loss: 0.666688.
+epoch 31, step 91499, loss: 0.913265.
+epoch 31, step 91599, loss: 0.982967.
+epoch 31, step 91699, loss: 0.950462.
+epoch 31, step 91799, loss: 1.329836.
+epoch 31, step 91899, loss: 0.834686.
+epoch 31, step 91999, loss: 1.126929.
+epoch 31, step 92099, loss: 0.454237.
+epoch 31, step 92199, loss: 0.822408.
+epoch 31, step 92299, loss: 1.088626.
+epoch 31, step 92399, loss: 0.000000.
+epoch 31, step 92499, loss: 0.616740.
+epoch 31, step 92599, loss: 0.917110.
+epoch 31, step 92699, loss: 0.613063.
+epoch 31, step 92799, loss: 1.011638.
+epoch 31, step 92899, loss: 0.586501.
+epoch 31, step 92999, loss: 0.575854.
+Saving model to ./exp/20200509/kaldi_lda_100_lessnormalized/nnet/kaldi_lda_100_lessnormalized_epoch_31,finished.
+Calculating the valid_eer and valid_dcf.
+valid_eer: 1.3793103448275863, 
+valid_minDCF(p-target=0.01): 0.1813793103448299,
+valid_minDCF(p-target=0.001): 0.30645320197041337
+----------------------------------------
+epoch 32, step 93099, loss: 0.889793.
+epoch 32, step 93199, loss: 0.723938.
+epoch 32, step 93299, loss: 1.206006.
+epoch 32, step 93399, loss: 0.390099.
+epoch 32, step 93499, loss: 0.340899.
+epoch 32, step 93599, loss: 0.417996.
+epoch 32, step 93699, loss: 0.731659.
+epoch 32, step 93799, loss: 0.701010.
+epoch 32, step 93899, loss: 0.710001.
+epoch 32, step 93999, loss: 1.091161.
+epoch 32, step 94099, loss: 0.606582.
+epoch 32, step 94199, loss: 0.594508.
+epoch 32, step 94299, loss: 0.330976.
+epoch 32, step 94399, loss: 0.953385.
+epoch 32, step 94499, loss: 0.465163.
+epoch 32, step 94599, loss: 0.621195.
+epoch 32, step 94699, loss: 1.706913.
+epoch 32, step 94799, loss: 1.207988.
+epoch 32, step 94899, loss: 0.579473.
+epoch 32, step 94999, loss: 0.790184.
+epoch 32, step 95099, loss: 0.018995.
+epoch 32, step 95199, loss: 0.841279.
+epoch 32, step 95299, loss: 0.496087.
+epoch 32, step 95399, loss: 0.507577.
+epoch 32, step 95499, loss: 0.756973.
+epoch 32, step 95599, loss: 0.328627.
+epoch 32, step 95699, loss: 1.240307.
+epoch 32, step 95799, loss: 0.834711.
+epoch 32, step 95899, loss: 1.015402.
+epoch 32, step 95999, loss: 1.281549.
+Saving model to ./exp/20200509/kaldi_lda_100_lessnormalized/nnet/kaldi_lda_100_lessnormalized_epoch_32,finished.
+Calculating the valid_eer and valid_dcf.
+valid_eer: 1.3793103448275863, 
+valid_minDCF(p-target=0.01): 0.19098522167488216,
+valid_minDCF(p-target=0.001): 0.28645320197041335
+----------------------------------------
+Haven't imporved for 5 epochs, down the lr to [1.25e-05]
+epoch 33, step 96099, loss: 0.760079.
+epoch 33, step 96199, loss: 0.992978.
+epoch 33, step 96299, loss: 0.914012.
+epoch 33, step 96399, loss: 0.825423.
+epoch 33, step 96499, loss: 1.167769.
+epoch 33, step 96599, loss: 0.915589.
+epoch 33, step 96699, loss: 1.221724.
+epoch 33, step 96799, loss: 1.000520.
+epoch 33, step 96899, loss: 0.512975.
+epoch 33, step 96999, loss: 0.785840.
+epoch 33, step 97099, loss: 0.746551.
+epoch 33, step 97199, loss: 0.773518.
+epoch 33, step 97299, loss: 0.383293.
+epoch 33, step 97399, loss: 0.515081.
+epoch 33, step 97499, loss: 0.465621.
+epoch 33, step 97599, loss: 0.285175.
+epoch 33, step 97699, loss: 0.336809.
+epoch 33, step 97799, loss: 0.530460.
+epoch 33, step 97899, loss: 0.543924.
+epoch 33, step 97999, loss: 0.675582.
+epoch 33, step 98099, loss: 0.579095.
+epoch 33, step 98199, loss: 0.662281.
+epoch 33, step 98299, loss: 0.606593.
+epoch 33, step 98399, loss: 0.785829.
+epoch 33, step 98499, loss: 1.012354.
+epoch 33, step 98599, loss: 0.511577.
+epoch 33, step 98699, loss: 1.091454.
+epoch 33, step 98799, loss: 1.118593.
+epoch 33, step 98899, loss: 1.192816.
+epoch 33, step 98999, loss: 1.017496.
+Saving model to ./exp/20200509/kaldi_lda_100_lessnormalized/nnet/kaldi_lda_100_lessnormalized_epoch_33,finished.
+Calculating the valid_eer and valid_dcf.
+valid_eer: 1.206896551724138, 
+valid_minDCF(p-target=0.01): 0.17125615763547225,
+valid_minDCF(p-target=0.001): 0.26162561576351673
+----------------------------------------
+epoch 34, step 99099, loss: 0.794073.
+epoch 34, step 99199, loss: 0.703653.
+epoch 34, step 99299, loss: 0.213252.
+epoch 34, step 99399, loss: 0.672093.
+epoch 34, step 99499, loss: 0.415695.
+epoch 34, step 99599, loss: 0.467946.
+epoch 34, step 99699, loss: 1.096019.
+epoch 34, step 99799, loss: 0.715493.
+epoch 34, step 99899, loss: 0.306253.
+epoch 34, step 99999, loss: 0.956300.
+epoch 34, step 100099, loss: 1.018121.
+epoch 34, step 100199, loss: 0.622255.
+epoch 34, step 100299, loss: 0.830734.
+epoch 34, step 100399, loss: 0.000000.
+epoch 34, step 100499, loss: 0.942921.
+epoch 34, step 100599, loss: 0.569887.
+epoch 34, step 100699, loss: 0.702251.
+epoch 34, step 100799, loss: 0.586795.
+epoch 34, step 100899, loss: 0.560411.
+epoch 34, step 100999, loss: 0.899659.
+epoch 34, step 101099, loss: 0.502037.
+epoch 34, step 101199, loss: 1.016745.
+epoch 34, step 101299, loss: 1.074378.
+epoch 34, step 101399, loss: 0.706495.
+epoch 34, step 101499, loss: 0.527779.
+epoch 34, step 101599, loss: 0.343107.
+epoch 34, step 101699, loss: 0.917528.
+epoch 34, step 101799, loss: 0.791578.
+epoch 34, step 101899, loss: 0.483207.
+epoch 34, step 101999, loss: 0.551771.
+Saving model to ./exp/20200509/kaldi_lda_100_lessnormalized/nnet/kaldi_lda_100_lessnormalized_epoch_34,finished.
+Calculating the valid_eer and valid_dcf.
+valid_eer: 1.2413793103448276, 
+valid_minDCF(p-target=0.01): 0.1715763546798032,
+valid_minDCF(p-target=0.001): 0.2965763546798134
+----------------------------------------
+epoch 35, step 102099, loss: 0.955506.
+epoch 35, step 102199, loss: 0.892103.
+epoch 35, step 102299, loss: 1.019485.
+epoch 35, step 102399, loss: 0.493579.
+epoch 35, step 102499, loss: 0.442426.
+epoch 35, step 102599, loss: 0.872917.
+epoch 35, step 102699, loss: 1.323642.
+epoch 35, step 102799, loss: 0.509188.
+epoch 35, step 102899, loss: 0.782644.
+epoch 35, step 102999, loss: 0.732620.
+epoch 35, step 103099, loss: 0.946770.
+epoch 35, step 103199, loss: 1.227392.
+epoch 35, step 103299, loss: 0.492192.
+epoch 35, step 103399, loss: 1.329467.
+epoch 35, step 103499, loss: 0.346586.
+epoch 35, step 103599, loss: 0.775661.
+epoch 35, step 103699, loss: 0.339774.
+epoch 35, step 103799, loss: 0.587054.
+epoch 35, step 103899, loss: 0.963251.
+epoch 35, step 103999, loss: 0.805791.
+epoch 35, step 104099, loss: 0.830747.
+epoch 35, step 104199, loss: 0.515557.
+epoch 35, step 104299, loss: 0.497913.
+epoch 35, step 104399, loss: 0.334117.
+epoch 35, step 104499, loss: 0.882913.
+epoch 35, step 104599, loss: 1.269626.
+epoch 35, step 104699, loss: 1.032612.
+epoch 35, step 104799, loss: 0.943094.
+epoch 35, step 104899, loss: 0.427740.
+epoch 35, step 104999, loss: 0.899484.
+Saving model to ./exp/20200509/kaldi_lda_100_lessnormalized/nnet/kaldi_lda_100_lessnormalized_epoch_35,finished.
+Calculating the valid_eer and valid_dcf.
+valid_eer: 1.2413793103448276, 
+valid_minDCF(p-target=0.01): 0.16674876847290665,
+valid_minDCF(p-target=0.001): 0.27381773399015824
+----------------------------------------
+epoch 36, step 105099, loss: 1.370862.
+epoch 36, step 105199, loss: 0.690953.
+epoch 36, step 105299, loss: 1.076617.
+epoch 36, step 105399, loss: 1.472707.
+epoch 36, step 105499, loss: 0.855117.
+epoch 36, step 105599, loss: 0.686528.
+epoch 36, step 105699, loss: 1.047287.
+epoch 36, step 105799, loss: 1.001994.
+epoch 36, step 105899, loss: 0.683544.
+epoch 36, step 105999, loss: 0.526379.
+epoch 36, step 106099, loss: 0.737647.
+epoch 36, step 106199, loss: 0.904971.
+epoch 36, step 106299, loss: 0.469143.
+epoch 36, step 106399, loss: 0.749495.
+epoch 36, step 106499, loss: 0.607391.
+epoch 36, step 106599, loss: 1.153476.
+epoch 36, step 106699, loss: 1.257320.
+epoch 36, step 106799, loss: 0.694789.
+epoch 36, step 106899, loss: 1.111983.
+epoch 36, step 106999, loss: 0.587078.
+epoch 36, step 107099, loss: 1.157456.
+epoch 36, step 107199, loss: 0.425990.
+epoch 36, step 107299, loss: 0.516743.
+epoch 36, step 107399, loss: 0.521057.
+epoch 36, step 107499, loss: 0.985843.
+epoch 36, step 107599, loss: 0.647643.
+epoch 36, step 107699, loss: 0.898751.
+epoch 36, step 107799, loss: 1.006684.
+epoch 36, step 107899, loss: 0.981066.
+epoch 36, step 107999, loss: 1.003065.
+Saving model to ./exp/20200509/kaldi_lda_100_lessnormalized/nnet/kaldi_lda_100_lessnormalized_epoch_36,finished.
+Calculating the valid_eer and valid_dcf.
+valid_eer: 1.103448275862069, 
+valid_minDCF(p-target=0.01): 0.15509852216748782,
+valid_minDCF(p-target=0.001): 0.24576354679799953
+----------------------------------------
+epoch 37, step 108099, loss: 0.983129.
+epoch 37, step 108199, loss: 1.376578.
+epoch 37, step 108299, loss: 0.557152.
+epoch 37, step 108399, loss: 1.076295.
+epoch 37, step 108499, loss: 0.572171.
+epoch 37, step 108599, loss: 0.615611.
+epoch 37, step 108699, loss: 0.870360.
+epoch 37, step 108799, loss: 0.751112.
+epoch 37, step 108899, loss: 0.808348.
+epoch 37, step 108999, loss: 0.555173.
+epoch 37, step 109099, loss: 0.630090.
+epoch 37, step 109199, loss: 0.481882.
+epoch 37, step 109299, loss: 1.527506.
+epoch 37, step 109399, loss: 0.664009.
+epoch 37, step 109499, loss: 0.963128.
+epoch 37, step 109599, loss: 0.324650.
+epoch 37, step 109699, loss: 0.384502.
+epoch 37, step 109799, loss: 1.102927.
+epoch 37, step 109899, loss: 0.825408.
+epoch 37, step 109999, loss: 1.077515.
+epoch 37, step 110099, loss: 0.274287.
+epoch 37, step 110199, loss: 0.658012.
+epoch 37, step 110299, loss: 0.723913.
+epoch 37, step 110399, loss: 0.656362.
+epoch 37, step 110499, loss: 1.073718.
+epoch 37, step 110599, loss: 0.723811.
+epoch 37, step 110699, loss: 0.545614.
+epoch 37, step 110799, loss: 0.299287.
+epoch 37, step 110899, loss: 0.862388.
+epoch 37, step 110999, loss: 1.098748.
+Saving model to ./exp/20200509/kaldi_lda_100_lessnormalized/nnet/kaldi_lda_100_lessnormalized_epoch_37,finished.
+Calculating the valid_eer and valid_dcf.
+valid_eer: 1.1724137931034484, 
+valid_minDCF(p-target=0.01): 0.1426354679802987,
+valid_minDCF(p-target=0.001): 0.23472906403937888
+----------------------------------------
+epoch 38, step 111099, loss: 0.527110.
+epoch 38, step 111199, loss: 0.000000.
+epoch 38, step 111299, loss: 0.644245.
+epoch 38, step 111399, loss: 0.973104.
+epoch 38, step 111499, loss: 1.277740.
+epoch 38, step 111599, loss: 0.646312.
+epoch 38, step 111699, loss: 1.017669.
+epoch 38, step 111799, loss: 1.179319.
+epoch 38, step 111899, loss: 0.354924.
+epoch 38, step 111999, loss: 0.273263.
+epoch 38, step 112099, loss: 1.044085.
+epoch 38, step 112199, loss: 0.609998.
+epoch 38, step 112299, loss: 0.329462.
+epoch 38, step 112399, loss: 1.379597.
+epoch 38, step 112499, loss: 0.539762.
+epoch 38, step 112599, loss: 0.374895.
+epoch 38, step 112699, loss: 1.062258.
+epoch 38, step 112799, loss: 0.253487.
+epoch 38, step 112899, loss: 0.420038.
+epoch 38, step 112999, loss: 0.695699.
+epoch 38, step 113099, loss: 0.633326.
+epoch 38, step 113199, loss: 0.821342.
+epoch 38, step 113299, loss: 1.122334.
+epoch 38, step 113399, loss: 0.689274.
+epoch 38, step 113499, loss: 1.064558.
+epoch 38, step 113599, loss: 0.301371.
+epoch 38, step 113699, loss: 0.255066.
+epoch 38, step 113799, loss: 1.195107.
+epoch 38, step 113899, loss: 0.840721.
+epoch 38, step 113999, loss: 1.598838.
+Saving model to ./exp/20200509/kaldi_lda_100_lessnormalized/nnet/kaldi_lda_100_lessnormalized_epoch_38,finished.
+Calculating the valid_eer and valid_dcf.
+valid_eer: 1.2758620689655173, 
+valid_minDCF(p-target=0.01): 0.1605911330049234,
+valid_minDCF(p-target=0.001): 0.24438423645317198
+----------------------------------------
+epoch 39, step 114099, loss: 0.685939.
+epoch 39, step 114199, loss: 0.719596.
+epoch 39, step 114299, loss: 1.574529.
+epoch 39, step 114399, loss: 0.921835.
+epoch 39, step 114499, loss: 1.066002.
+epoch 39, step 114599, loss: 1.219504.
+epoch 39, step 114699, loss: 0.679544.
+epoch 39, step 114799, loss: 0.772580.
+epoch 39, step 114899, loss: 0.698046.
+epoch 39, step 114999, loss: 0.701002.
+epoch 39, step 115099, loss: 0.661474.
+epoch 39, step 115199, loss: 0.776192.
+epoch 39, step 115299, loss: 0.691460.
+epoch 39, step 115399, loss: 1.122630.
+epoch 39, step 115499, loss: 0.840035.
+epoch 39, step 115599, loss: 0.756741.
+epoch 39, step 115699, loss: 0.854531.
+epoch 39, step 115799, loss: 0.701163.
+epoch 39, step 115899, loss: 0.923024.
+epoch 39, step 115999, loss: 1.308555.
+epoch 39, step 116099, loss: 0.286959.
+epoch 39, step 116199, loss: 0.829489.
+epoch 39, step 116299, loss: 0.586930.
+epoch 39, step 116399, loss: 1.121788.
+epoch 39, step 116499, loss: 1.232807.
+epoch 39, step 116599, loss: 1.037518.
+epoch 39, step 116699, loss: 1.366859.
+epoch 39, step 116799, loss: 0.996759.
+epoch 39, step 116899, loss: 0.974933.
+epoch 39, step 116999, loss: 0.875860.
+Saving model to ./exp/20200509/kaldi_lda_100_lessnormalized/nnet/kaldi_lda_100_lessnormalized_epoch_39,finished.
+Calculating the valid_eer and valid_dcf.
+valid_eer: 1.2413793103448276, 
+valid_minDCF(p-target=0.01): 0.16689655172414025,
+valid_minDCF(p-target=0.001): 0.264384236453172
+----------------------------------------
+epoch 40, step 117099, loss: 1.116115.
+epoch 40, step 117199, loss: 1.168571.
+epoch 40, step 117299, loss: 0.912677.
+epoch 40, step 117399, loss: 1.002171.
+epoch 40, step 117499, loss: 0.525854.
+epoch 40, step 117599, loss: 0.921592.
+epoch 40, step 117699, loss: 0.872127.
+epoch 40, step 117799, loss: 0.897902.
+epoch 40, step 117899, loss: 0.322397.
+epoch 40, step 117999, loss: 0.540671.
+epoch 40, step 118099, loss: 0.870385.
+epoch 40, step 118199, loss: 0.815342.
+epoch 40, step 118299, loss: 0.404073.
+epoch 40, step 118399, loss: 1.664101.
+epoch 40, step 118499, loss: 0.674413.
+epoch 40, step 118599, loss: 0.965565.
+epoch 40, step 118699, loss: 0.997541.
+epoch 40, step 118799, loss: 0.390963.
+epoch 40, step 118899, loss: 0.833487.
+epoch 40, step 118999, loss: 0.862944.
+epoch 40, step 119099, loss: 1.266614.
+epoch 40, step 119199, loss: 0.733581.
+epoch 40, step 119299, loss: 1.052588.
+epoch 40, step 119399, loss: 1.111314.
+epoch 40, step 119499, loss: 0.146780.
+epoch 40, step 119599, loss: 0.978775.
+epoch 40, step 119699, loss: 1.280578.
+epoch 40, step 119799, loss: 0.717263.
+epoch 40, step 119899, loss: 0.649508.
+epoch 40, step 119999, loss: 0.643014.
+Saving model to ./exp/20200509/kaldi_lda_100_lessnormalized/nnet/kaldi_lda_100_lessnormalized_epoch_40,finished.
+Calculating the valid_eer and valid_dcf.
+valid_eer: 1.1724137931034484, 
+valid_minDCF(p-target=0.01): 0.1600492610837432,
+valid_minDCF(p-target=0.001): 0.25450738916257204
+----------------------------------------
+epoch 41, step 120099, loss: 0.792508.
+epoch 41, step 120199, loss: 1.103273.
+epoch 41, step 120299, loss: 0.957143.
+epoch 41, step 120399, loss: 0.454658.
+epoch 41, step 120499, loss: 0.798579.
+epoch 41, step 120599, loss: 0.516615.
+epoch 41, step 120699, loss: 0.751889.
+epoch 41, step 120799, loss: 0.709417.
+epoch 41, step 120899, loss: 0.640251.
+epoch 41, step 120999, loss: 1.165071.
+epoch 41, step 121099, loss: 0.166569.
+epoch 41, step 121199, loss: 0.801624.
+epoch 41, step 121299, loss: 1.165405.
+epoch 41, step 121399, loss: 0.634783.
+epoch 41, step 121499, loss: 1.162005.
+epoch 41, step 121599, loss: 0.720772.
+epoch 41, step 121699, loss: 1.176549.
+epoch 41, step 121799, loss: 0.759621.
+epoch 41, step 121899, loss: 0.862809.
+epoch 41, step 121999, loss: 0.697721.
+epoch 41, step 122099, loss: 0.792346.
+epoch 41, step 122199, loss: 1.101416.
+epoch 41, step 122299, loss: 1.174313.
+epoch 41, step 122399, loss: 1.095704.
+epoch 41, step 122499, loss: 0.758931.
+epoch 41, step 122599, loss: 0.626656.
+epoch 41, step 122699, loss: 0.813064.
+epoch 41, step 122799, loss: 1.361729.
+epoch 41, step 122899, loss: 0.826856.
+epoch 41, step 122999, loss: 0.503318.
+Saving model to ./exp/20200509/kaldi_lda_100_lessnormalized/nnet/kaldi_lda_100_lessnormalized_epoch_41,finished.
+Calculating the valid_eer and valid_dcf.
+valid_eer: 1.206896551724138, 
+valid_minDCF(p-target=0.01): 0.16376847290640228,
+valid_minDCF(p-target=0.001): 0.2581773399014478
+----------------------------------------
+Haven't imporved for 5 epochs, down the lr to [6.25e-06]
+epoch 42, step 123099, loss: 1.101588.
+epoch 42, step 123199, loss: 0.591746.
+epoch 42, step 123299, loss: 0.151588.
+epoch 42, step 123399, loss: 0.386370.
+epoch 42, step 123499, loss: 0.490270.
+epoch 42, step 123599, loss: 0.639476.
+epoch 42, step 123699, loss: 0.988548.
+epoch 42, step 123799, loss: 0.651127.
+epoch 42, step 123899, loss: 1.007958.
+epoch 42, step 123999, loss: 0.863050.
+epoch 42, step 124099, loss: 1.435384.
+epoch 42, step 124199, loss: 0.772423.
+epoch 42, step 124299, loss: 0.942661.
+epoch 42, step 124399, loss: 0.905316.
+epoch 42, step 124499, loss: 1.243733.
+epoch 42, step 124599, loss: 0.421457.
+epoch 42, step 124699, loss: 0.649079.
+epoch 42, step 124799, loss: 0.305454.
+epoch 42, step 124899, loss: 1.341905.
+epoch 42, step 124999, loss: 0.845977.
+epoch 42, step 125099, loss: 0.986541.
+epoch 42, step 125199, loss: 0.791211.
+epoch 42, step 125299, loss: 0.621089.
+epoch 42, step 125399, loss: 0.739837.
+epoch 42, step 125499, loss: 0.846505.
+epoch 42, step 125599, loss: 0.250692.
+epoch 42, step 125699, loss: 0.386498.
+epoch 42, step 125799, loss: 0.787304.
+epoch 42, step 125899, loss: 0.903029.
+epoch 42, step 125999, loss: 0.920485.
+Saving model to ./exp/20200509/kaldi_lda_100_lessnormalized/nnet/kaldi_lda_100_lessnormalized_epoch_42,finished.
+Calculating the valid_eer and valid_dcf.
+valid_eer: 1.2413793103448276, 
+valid_minDCF(p-target=0.01): 0.15995073891626146,
+valid_minDCF(p-target=0.001): 0.27472906403937886
+----------------------------------------
+epoch 43, step 126099, loss: 0.427147.
+epoch 43, step 126199, loss: 0.598829.
+epoch 43, step 126299, loss: 0.554475.
+epoch 43, step 126399, loss: 0.812087.
+epoch 43, step 126499, loss: 0.000000.
+epoch 43, step 126599, loss: 1.088701.
+epoch 43, step 126699, loss: 0.413257.
+epoch 43, step 126799, loss: 1.182859.
+epoch 43, step 126899, loss: 0.382926.
+epoch 43, step 126999, loss: 0.661258.
+epoch 43, step 127099, loss: 0.621917.
+epoch 43, step 127199, loss: 0.344623.
+epoch 43, step 127299, loss: 0.985303.
+epoch 43, step 127399, loss: 0.907907.
+epoch 43, step 127499, loss: 0.589723.
+epoch 43, step 127599, loss: 1.041657.
+epoch 43, step 127699, loss: 0.727613.
+epoch 43, step 127799, loss: 0.695284.
+epoch 43, step 127899, loss: 1.056744.
+epoch 43, step 127999, loss: 0.486581.
+epoch 43, step 128099, loss: 0.656866.
+epoch 43, step 128199, loss: 0.948382.
+epoch 43, step 128299, loss: 0.756679.
+epoch 43, step 128399, loss: 1.063898.
+epoch 43, step 128499, loss: 0.641412.
+epoch 43, step 128599, loss: 0.508126.
+epoch 43, step 128699, loss: 1.024111.
+epoch 43, step 128799, loss: 0.665706.
+epoch 43, step 128899, loss: 0.788212.
+epoch 43, step 128999, loss: 0.254940.
+Saving model to ./exp/20200509/kaldi_lda_100_lessnormalized/nnet/kaldi_lda_100_lessnormalized_epoch_43,finished.
+Calculating the valid_eer and valid_dcf.
+valid_eer: 1.1724137931034484, 
+valid_minDCF(p-target=0.01): 0.16450738916255692,
+valid_minDCF(p-target=0.001): 0.28231527093593056
+----------------------------------------
+epoch 44, step 129099, loss: 0.551642.
+epoch 44, step 129199, loss: 0.188798.
+epoch 44, step 129299, loss: 0.989059.
+epoch 44, step 129399, loss: 0.610256.
+epoch 44, step 129499, loss: 0.245573.
+epoch 44, step 129599, loss: 1.109841.
+epoch 44, step 129699, loss: 0.268113.
+epoch 44, step 129799, loss: 1.887790.
+epoch 44, step 129899, loss: 0.509042.
+epoch 44, step 129999, loss: 0.647726.
+epoch 44, step 130099, loss: 0.885288.
+epoch 44, step 130199, loss: 0.612023.
+epoch 44, step 130299, loss: 0.292706.
+epoch 44, step 130399, loss: 0.254824.
+epoch 44, step 130499, loss: 0.943799.
+epoch 44, step 130599, loss: 0.627625.
+epoch 44, step 130699, loss: 0.716857.
+epoch 44, step 130799, loss: 0.862903.
+epoch 44, step 130899, loss: 0.750964.
+epoch 44, step 130999, loss: 0.453701.
+epoch 44, step 131099, loss: 1.290231.
+epoch 44, step 131199, loss: 1.202351.
+epoch 44, step 131299, loss: 0.916763.
+epoch 44, step 131399, loss: 1.052915.
+epoch 44, step 131499, loss: 0.665610.
+epoch 44, step 131599, loss: 0.591126.
+epoch 44, step 131699, loss: 1.253726.
+epoch 44, step 131799, loss: 1.138082.
+epoch 44, step 131899, loss: 0.776941.
+epoch 44, step 131999, loss: 0.557708.
+Saving model to ./exp/20200509/kaldi_lda_100_lessnormalized/nnet/kaldi_lda_100_lessnormalized_epoch_44,finished.
+Calculating the valid_eer and valid_dcf.
+valid_eer: 1.1724137931034484, 
+valid_minDCF(p-target=0.01): 0.1781527093596102,
+valid_minDCF(p-target=0.001): 0.30369458128075816
+----------------------------------------
+epoch 45, step 132099, loss: 0.850564.
+epoch 45, step 132199, loss: 0.888303.
+epoch 45, step 132299, loss: 0.436591.
+epoch 45, step 132399, loss: 0.548956.
+epoch 45, step 132499, loss: 0.407510.
+epoch 45, step 132599, loss: 0.892934.
+epoch 45, step 132699, loss: 0.530223.
+epoch 45, step 132799, loss: 0.318938.
+epoch 45, step 132899, loss: 0.791663.
+epoch 45, step 132999, loss: 0.642596.
+epoch 45, step 133099, loss: 1.065036.
+epoch 45, step 133199, loss: 0.709191.
+epoch 45, step 133299, loss: 0.620113.
+epoch 45, step 133399, loss: 1.091315.
+epoch 45, step 133499, loss: 1.347582.
+epoch 45, step 133599, loss: 0.271858.
+epoch 45, step 133699, loss: 0.254226.
+epoch 45, step 133799, loss: 0.798103.
+epoch 45, step 133899, loss: 0.280534.
+epoch 45, step 133999, loss: 0.635977.
+epoch 45, step 134099, loss: 0.737336.
+epoch 45, step 134199, loss: 0.856593.
+epoch 45, step 134299, loss: 0.766416.
+epoch 45, step 134399, loss: 0.665439.
+epoch 45, step 134499, loss: 1.080440.
+epoch 45, step 134599, loss: 0.992391.
+epoch 45, step 134699, loss: 0.836448.
+epoch 45, step 134799, loss: 0.968253.
+epoch 45, step 134899, loss: 0.946124.
+epoch 45, step 134999, loss: 0.899402.
+Saving model to ./exp/20200509/kaldi_lda_100_lessnormalized/nnet/kaldi_lda_100_lessnormalized_epoch_45,finished.
+Calculating the valid_eer and valid_dcf.
+valid_eer: 1.1379310344827587, 
+valid_minDCF(p-target=0.01): 0.1567733990147826,
+valid_minDCF(p-target=0.001): 0.2871428571428271
+----------------------------------------
+epoch 46, step 135099, loss: 0.557480.
+epoch 46, step 135199, loss: 0.956711.
+epoch 46, step 135299, loss: 0.623054.
+epoch 46, step 135399, loss: 0.496581.
+epoch 46, step 135499, loss: 0.529101.
+epoch 46, step 135599, loss: 0.598333.
+epoch 46, step 135699, loss: 1.186483.
+epoch 46, step 135799, loss: 0.779878.
+epoch 46, step 135899, loss: 0.875053.
+epoch 46, step 135999, loss: 0.624758.
+epoch 46, step 136099, loss: 1.405618.
+epoch 46, step 136199, loss: 1.228687.
+epoch 46, step 136299, loss: 0.799007.
+epoch 46, step 136399, loss: 0.368059.
+epoch 46, step 136499, loss: 0.504846.
+epoch 46, step 136599, loss: 0.695900.
+epoch 46, step 136699, loss: 0.812676.
+epoch 46, step 136799, loss: 0.497173.
+epoch 46, step 136899, loss: 0.290710.
+epoch 46, step 136999, loss: 0.518945.
+epoch 46, step 137099, loss: 1.013257.
+epoch 46, step 137199, loss: 0.580193.
+epoch 46, step 137299, loss: 0.885491.
+epoch 46, step 137399, loss: 0.415322.
+epoch 46, step 137499, loss: 0.674727.
+epoch 46, step 137599, loss: 0.593465.
+epoch 46, step 137699, loss: 0.597058.
+epoch 46, step 137799, loss: 0.181584.
+epoch 46, step 137899, loss: 1.239567.
+epoch 46, step 137999, loss: 0.524308.
+Saving model to ./exp/20200509/kaldi_lda_100_lessnormalized/nnet/kaldi_lda_100_lessnormalized_epoch_46,finished.
+Calculating the valid_eer and valid_dcf.
+valid_eer: 1.2413793103448276, 
+valid_minDCF(p-target=0.01): 0.14862068965517358,
+valid_minDCF(p-target=0.001): 0.2494334975369863
+----------------------------------------
+Haven't imporved for 5 epochs, down the lr to [3.125e-06]
+epoch 47, step 138099, loss: 0.783868.
+epoch 47, step 138199, loss: 0.691844.
+epoch 47, step 138299, loss: 0.716823.
+epoch 47, step 138399, loss: 0.745422.
+epoch 47, step 138499, loss: 0.760238.
+epoch 47, step 138599, loss: 0.311580.
+epoch 47, step 138699, loss: 0.807172.
+epoch 47, step 138799, loss: 0.681241.
+epoch 47, step 138899, loss: 0.620673.
+epoch 47, step 138999, loss: 0.497507.
+epoch 47, step 139099, loss: 1.359575.
+epoch 47, step 139199, loss: 0.723649.
+epoch 47, step 139299, loss: 1.035883.
+epoch 47, step 139399, loss: 0.122850.
+epoch 47, step 139499, loss: 1.196134.
+epoch 47, step 139599, loss: 0.657517.
+epoch 47, step 139699, loss: 0.219834.
+epoch 47, step 139799, loss: 0.888708.
+epoch 47, step 139899, loss: 0.245006.
+epoch 47, step 139999, loss: 1.362707.
+epoch 47, step 140099, loss: 0.665931.
+epoch 47, step 140199, loss: 0.401882.
+epoch 47, step 140299, loss: 0.815102.
+epoch 47, step 140399, loss: 0.629040.
+epoch 47, step 140499, loss: 1.089498.
+epoch 47, step 140599, loss: 0.996212.
+epoch 47, step 140699, loss: 0.606756.
+epoch 47, step 140799, loss: 0.581806.
+epoch 47, step 140899, loss: 1.004587.
+epoch 47, step 140999, loss: 0.498759.
+Saving model to ./exp/20200509/kaldi_lda_100_lessnormalized/nnet/kaldi_lda_100_lessnormalized_epoch_47,finished.
+Calculating the valid_eer and valid_dcf.
+valid_eer: 1.2413793103448276, 
+valid_minDCF(p-target=0.01): 0.14894088669950453,
+valid_minDCF(p-target=0.001): 0.26416256157636514
+----------------------------------------
+epoch 48, step 141099, loss: 0.606323.
+epoch 48, step 141199, loss: 0.586773.
+epoch 48, step 141299, loss: 0.241902.
+epoch 48, step 141399, loss: 0.764366.
+epoch 48, step 141499, loss: 1.004458.
+epoch 48, step 141599, loss: 0.964119.
+epoch 48, step 141699, loss: 0.777299.
+epoch 48, step 141799, loss: 0.833605.
+epoch 48, step 141899, loss: 0.380945.
+epoch 48, step 141999, loss: 0.285782.
+epoch 48, step 142099, loss: 1.092315.
+epoch 48, step 142199, loss: 0.929081.
+epoch 48, step 142299, loss: 0.455733.
+epoch 48, step 142399, loss: 0.666800.
+epoch 48, step 142499, loss: 0.811896.
+epoch 48, step 142599, loss: 0.636632.
+epoch 48, step 142699, loss: 0.815140.
+epoch 48, step 142799, loss: 1.038303.
+epoch 48, step 142899, loss: 0.506860.
+epoch 48, step 142999, loss: 0.976110.
+epoch 48, step 143099, loss: 0.847921.
+epoch 48, step 143199, loss: 0.481967.
+epoch 48, step 143299, loss: 1.029638.
+epoch 48, step 143399, loss: 1.227049.
+epoch 48, step 143499, loss: 0.525122.
+epoch 48, step 143599, loss: 0.941107.
+epoch 48, step 143699, loss: 0.680281.
+epoch 48, step 143799, loss: 0.696377.
+epoch 48, step 143899, loss: 0.925039.
+epoch 48, step 143999, loss: 1.178413.
+Saving model to ./exp/20200509/kaldi_lda_100_lessnormalized/nnet/kaldi_lda_100_lessnormalized_epoch_48,finished.
+Calculating the valid_eer and valid_dcf.
+valid_eer: 1.1724137931034484, 
+valid_minDCF(p-target=0.01): 0.15507389162561305,
+valid_minDCF(p-target=0.001): 0.2820935960591237
+----------------------------------------
+epoch 49, step 144099, loss: 0.643449.
+epoch 49, step 144199, loss: 0.595828.
+epoch 49, step 144299, loss: 1.074637.
+epoch 49, step 144399, loss: 0.674467.
+epoch 49, step 144499, loss: 1.474369.
+epoch 49, step 144599, loss: 0.386423.
+epoch 49, step 144699, loss: 1.133739.
+epoch 49, step 144799, loss: 0.184052.
+epoch 49, step 144899, loss: 0.427540.
+epoch 49, step 144999, loss: 0.675617.
+epoch 49, step 145099, loss: 0.594323.
+epoch 49, step 145199, loss: 0.941653.
+epoch 49, step 145299, loss: 0.609036.
+epoch 49, step 145399, loss: 1.145452.
+epoch 49, step 145499, loss: 0.806326.
+epoch 49, step 145599, loss: 1.199308.
+epoch 49, step 145699, loss: 0.573958.
+epoch 49, step 145799, loss: 0.710921.
+epoch 49, step 145899, loss: 0.438461.
+epoch 49, step 145999, loss: 1.513111.
+epoch 49, step 146099, loss: 0.762711.
+epoch 49, step 146199, loss: 0.741296.
+epoch 49, step 146299, loss: 0.000000.
+epoch 49, step 146399, loss: 0.742170.
+epoch 49, step 146499, loss: 0.705746.
+epoch 49, step 146599, loss: 0.296689.
+epoch 49, step 146699, loss: 0.553730.
+epoch 49, step 146799, loss: 0.672334.
+epoch 49, step 146899, loss: 1.130576.
+epoch 49, step 146999, loss: 0.714787.
+Saving model to ./exp/20200509/kaldi_lda_100_lessnormalized/nnet/kaldi_lda_100_lessnormalized_epoch_49,finished.
+Calculating the valid_eer and valid_dcf.
+valid_eer: 1.1724137931034484, 
+valid_minDCF(p-target=0.01): 0.1533743842364545,
+valid_minDCF(p-target=0.001): 0.26645320197041333
+----------------------------------------
+epoch 50, step 147099, loss: 0.732161.
+epoch 50, step 147199, loss: 1.475786.
+epoch 50, step 147299, loss: 0.762855.
+epoch 50, step 147399, loss: 0.812180.
+epoch 50, step 147499, loss: 0.511446.
+epoch 50, step 147599, loss: 0.430911.
+epoch 50, step 147699, loss: 0.521301.
+epoch 50, step 147799, loss: 0.541982.
+epoch 50, step 147899, loss: 0.719942.
+epoch 50, step 147999, loss: 0.497262.
+epoch 50, step 148099, loss: 1.341749.
+epoch 50, step 148199, loss: 1.148554.
+epoch 50, step 148299, loss: 1.481104.
+epoch 50, step 148399, loss: 0.499493.
+epoch 50, step 148499, loss: 0.464762.
+epoch 50, step 148599, loss: 1.414422.
+epoch 50, step 148699, loss: 1.062652.
+epoch 50, step 148799, loss: 0.867648.
+epoch 50, step 148899, loss: 0.997263.
+epoch 50, step 148999, loss: 0.755017.
+epoch 50, step 149099, loss: 0.276844.
+epoch 50, step 149199, loss: 1.281634.
+epoch 50, step 149299, loss: 1.041182.
+epoch 50, step 149399, loss: 0.862657.
+epoch 50, step 149499, loss: 0.762402.
+epoch 50, step 149599, loss: 0.897057.
+epoch 50, step 149699, loss: 0.264956.
+epoch 50, step 149799, loss: 0.182425.
+epoch 50, step 149899, loss: 0.480455.
+epoch 50, step 149999, loss: 0.914205.
+Saving model to ./exp/20200509/kaldi_lda_100_lessnormalized/nnet/kaldi_lda_100_lessnormalized_epoch_50,finished.
+Calculating the valid_eer and valid_dcf.
+valid_eer: 1.1724137931034484, 
+valid_minDCF(p-target=0.01): 0.15263546798029984,
+valid_minDCF(p-target=0.001): 0.27266009852213746
+----------------------------------------
+{'best_valid_eer': {'epoch': 36, 'value': 1.103448275862069}, 'epochs_valid_eer_no_improve': 4}
