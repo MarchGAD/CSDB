@@ -1,6 +1,6 @@
-# DTPLDA-like-neural-backend
+# DBENet
 
-A scoring neural backend for x-vector based speaker verification.
+A DTPLDA-Like Neural Back-End Network for X-vector Based Speaker Verification.
 
 # Requirements
 
