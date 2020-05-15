@@ -43,7 +43,7 @@ cat result
 ```
 
 # Trained model
-A trained model using tdnn extractor has been placed in 'exp/kaldi_lda_100/nnet/kaldi_lda_100_epoch_50'. The compared baseline is from [kaldi x-vector](http://kaldi-asr.org/models/m7').
+A trained model using tdnn extractor has been placed in 'exp/kaldi_lda_100/nnet/kaldi_lda_100_epoch_50'. The compared baseline is from [kaldi x-vector](http://kaldi-asr.org/models/m7).
 
 **Note** that all the following commands are started under './DTPLDA-like-neural-backend/.'
 
