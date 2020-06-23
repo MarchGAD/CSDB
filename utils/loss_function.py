@@ -45,4 +45,20 @@ def batch_hard_triplet_loss(utts, aps, aps_inds, ans, ans_inds, alpha, div=False
     else:
         return result
 
+# def one_batch_hard_triplet_loss(utts, aps_size, scores, aps_inds, ans_inds, alpha, div=False):
+#     result = torch.tensor(0.0, dtype=torch.float32).cuda()
+#     cnt = 0
+#     for anchor in utts:
+#         taps = torch.min(scores[aps_inds[anchor], :])
+#         tans = torch.max(scores[[i + aps_size for i in ans_inds[anchor]], :])
+#         anchor_loss = alpha - taps  + tans
+#         #print('aps', taps.item(), 'tans', tans.item())
+#         if anchor_loss > 0:
+#             cnt += 1
+#             result += anchor_loss
+#    # print('---------------------------------------------------')
+#     if div and cnt > 0:
+#         return result / cnt
+#     else:
+#         return result
 

@@ -10,9 +10,9 @@ from tensorboardX import SummaryWriter
 from dataset.kaldi_reader import SiameseSet
 from utils.nnet import BasicNet, LdaNet, KaldiReductionCNN
 from utils.tools import Params, createdir, epoch_control
-from utils.loss_function import batch_hard_triplet_loss, lifted_embedding_loss, sf_batch_hard_triplet_loss
+from utils.loss_function import batch_hard_triplet_loss, lifted_embedding_loss, sf_batch_hard_triplet_loss, \
+    one_batch_hard_triplet_loss
 from score.eer_and_mindcf import Resulter
-from torch.utils.data import RandomSampler
 from kaldiio import load_mat
 
 exp_path = './exp/'
@@ -171,10 +171,23 @@ if __name__ == '__main__':
             AnS = AnS.cuda()
             NS = NS.cuda()
 
-        sam = model(ApS, PS)
-        dif = model(AnS, NS)
+
+        # sam = model(ApS, PS)
+        # dif = model(AnS, NS)
+
+
+        AS = torch.cat([ApS, AnS], dim=0)
+        PNS = torch.cat([PS, NS], dim=0)
+        scores = model(AS, PNS)
+
+        ap_size = len(ApS)
+        sam = scores[:ap_size, :]
+        dif = scores[ap_size:, :]
 
         loss = loss_function(utts, sam, a2p_inds, dif, a2n_inds, alpha, div=True if 'div' not in params.dict else params.div)
+
+        # loss = one_batch_hard_triplet_loss(utts, len(ApS), scores, a2p_inds, a2n_inds, alpha, div=True if 'div' not in params.dict else params.div)
+
         recorder.add_scalar(loss_name(params), loss.item(), global_step=gstep)
 
         if gstep % params.show_step == 0:

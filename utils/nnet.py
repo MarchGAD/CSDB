@@ -3,6 +3,7 @@ import torch.nn as nn
 from utils.tools import flat, overlay, inter
 import torch.nn.functional as F
 
+
 class KaldiReductionCNN(nn.Module):
 
     def __init__(self, kaldi_lda, frozen=False, contains_bias=True):
@@ -61,7 +62,6 @@ class LdaNet(nn.Module):
         return self.basic(a, b)
 
 
-
 class CnnNet(nn.Module):
 
     def __init__(self, in_channels=2):
@@ -71,9 +71,11 @@ class CnnNet(nn.Module):
         self.max_pool = nn.MaxPool2d(3, stride=2, padding=1)
         self.convs = nn.Sequential(
             nn.Conv2d(in_channels=128, out_channels=256, kernel_size=3, padding=1),
+            nn.BatchNorm2d(256),
             nn.ReLU(inplace=True),
             nn.Conv2d(in_channels=256, out_channels=512, kernel_size=3, padding=1),
-            nn.ReLU(inplace=True)
+            nn.BatchNorm2d(512),
+            nn.ReLU(inplace=True),
         )
         self.fcs = nn.Sequential(
             nn.Linear(in_features=512, out_features=1024),
@@ -94,8 +96,6 @@ class CnnNet(nn.Module):
             elif isinstance(m, nn.BatchNorm2d):
                 m.weight.data.fill_(1)
                 m.bias.data.zero_()
-
-
 
     def forward(self, *input):
         assert len(input) == 2
@@ -130,7 +130,6 @@ class BasicNet(nn.Module):
             in_features = in_features
         elif self.input_process == 'addout':
             in_features = in_features ** 2 + in_features
-
 
         self.fcs = self._make_fcs(int(in_features), mid_feature, hidden_layers)
         if init:

@@ -61,3 +61,14 @@ python get_scores -e 50
 //wait for scoring
 cat result
 ```
+
+# Results
+
+Models of results we showed in paper didn't trained really well at that time, so the following results may be better.
+
+| Name | Extractor | Network | GPLDA EER(\%) | **DBENet** EER(\%)|
+| ------ | ------ | ------ | ------ | ------ |
+| FC A | TDNN | kaldi_lda | 3.1177 | **2.5822** |
+| CNN  | TDNN | kaldi_cnn | 3.1177 | **2.7678** |
+| FC B | ResNet | kaldi_lda | 2.3171 | **1.9459** |
+| FC C | EFTDNN | kaldi_lda | 1.0392 | **0.9067** |
