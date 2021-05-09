@@ -64,6 +64,7 @@ class KaldiLoader(Dataset):
     def __len__(self):
         return len(self.spk_labels)
 
+
 class SiameseSet(KaldiLoader):
     def __init__(self, scp_path, use_lda=False, lda_loader=None, utt_per_spk=None, seed=19971222,
                  spk_num=None, pre_load=False, strategy='totrand', ratio=0.1):
@@ -91,13 +92,15 @@ class SiameseSet(KaldiLoader):
 
         elif self.strategy == 'spkrand':
             keys2load = set(self.raw_labels)
-
+        elif self.strategy == 'batch_hard':
+            keys2load = set(self.raw_labels)
         for key in keys2load:
             xvec = torch.from_numpy(self.datas.get(key))
             if self.use_lda:
                 xvec = self.lda_loader.transform(xvec.unsqueeze(0))
                 xvec = torch.from_numpy(xvec.squeeze())
-            self.pre_load_data[key] = xvec
+            self.pre_load_data[key] = xvec.unsqueeze(0).cuda()
+
 
     def choose_strategy(self):
         if self.strategy == 'totrand':
@@ -212,33 +215,25 @@ class SiameseSet(KaldiLoader):
             utts = []
             for spk in spks:
                 utts.extend(get_utts_per_spk(spk, self.utt_per_spk))
-            utts = utts if len(utts) % 2 == 0 else utts[:-1]
-            mid = int(len(utts) / 2)
-            rand_indexes = torch.randperm(len(utts))
+
+            # utts = utts if len(utts) % 2 == 0 else utts[:-1]
+            # mid = int(len(utts) / 2)
+            # rand_indexes = torch.randperm(len(utts))
             spk1s = []
             spk2s = []
             xvecs_a = None
             xvecs_b = None
             labels = []
-            for i in range(mid):
-                utt1 = utts[int(rand_indexes[i])]
-                utt2 = utts[int(rand_indexes[i + mid])]
+
+            for (utt1, utt2) in combinations(utts, 2):
                 spk1 = re.match(r'(.*?)-.*', utt1).group(1)
                 spk2 = re.match(r'(.*?)-.*', utt2).group(1)
-                label = 1 if spk1 == spk2 else -1
+                label = 1 if spk1 == spk2 else 0
                 labels.append(label)
                 spk1s.append(spk1)
                 spk2s.append(spk2)
-                if self.use_lda and self.lda_loader is not None:
-                    def lda_transform(key):
-                        xvec = torch.from_numpy(self.datas.get(key))
-                        xvec = self.lda_loader.transform(xvec.unsqueeze(0))
-                        return torch.from_numpy(xvec)
-                    xvec1 = lda_transform(utt1)
-                    xvec2 = lda_transform(utt2)
-                else:
-                    xvec1 = torch.from_numpy(self.datas.get(utt1)).unsqueeze(0)
-                    xvec2 = torch.from_numpy(self.datas.get(utt2)).unsqueeze(0)
+                xvec1 = torch.from_numpy(self.datas.get(utt1)).unsqueeze(0)
+                xvec2 = torch.from_numpy(self.datas.get(utt2)).unsqueeze(0)
                 if xvecs_a is None:
                     xvecs_a = xvec1
                 else:
@@ -247,8 +242,35 @@ class SiameseSet(KaldiLoader):
                     xvecs_b = xvec2
                 else:
                     xvecs_b = torch.cat([xvecs_b, xvec2], dim=0)
+            # for i in range(mid):
+            #     utt1 = utts[int(rand_indexes[i])]
+            #     utt2 = utts[int(rand_indexes[i + mid])]
+            #     spk1 = re.match(r'(.*?)-.*', utt1).group(1)
+            #     spk2 = re.match(r'(.*?)-.*', utt2).group(1)
+            #     label = 1 if spk1 == spk2 else -1
+            #     labels.append(label)
+            #     spk1s.append(spk1)
+            #     spk2s.append(spk2)
+            #     if self.use_lda and self.lda_loader is not None:
+            #         def lda_transform(key):
+            #             xvec = torch.from_numpy(self.datas.get(key))
+            #             xvec = self.lda_loader.transform(xvec.unsqueeze(0))
+            #             return torch.from_numpy(xvec)
+            #         xvec1 = lda_transform(utt1)
+            #         xvec2 = lda_transform(utt2)
+            #     else:
+            #         xvec1 = torch.from_numpy(self.datas.get(utt1)).unsqueeze(0)
+            #         xvec2 = torch.from_numpy(self.datas.get(utt2)).unsqueeze(0)
+            #     if xvecs_a is None:
+            #         xvecs_a = xvec1
+            #     else:
+            #         xvecs_a = torch.cat([xvecs_a, xvec1], dim=0)
+            #     if xvecs_b is None:
+            #         xvecs_b = xvec2
+            #     else:
+            #         xvecs_b = torch.cat([xvecs_b, xvec2], dim=0)
             labels = torch.tensor(labels).float()
-            return spk1s, spk2s, utts[:mid], utts[mid:], xvecs_a, xvecs_b, labels
+            return spk1s, spk2s, [], [], xvecs_a, xvecs_b, labels
         elif self.strategy == 'batch_hard':
             spks_inds = self.rs.get_random_ints(0, len(self.spk_list), self.spk_num)
             spks = [self.spk_list[i] for i in spks_inds]
@@ -260,7 +282,10 @@ class SiameseSet(KaldiLoader):
                 spk2utt[spk] = tmp
                 utts.extend(tmp)
             for utt in utts:
-                utt2xvec[utt] = torch.from_numpy(self.datas.get(utt)).unsqueeze(0)
+                if self.pre_load:
+                    utt2xvec[utt] = self.pre_load_data[utt]
+                else:
+                    utt2xvec[utt] = torch.from_numpy(self.datas.get(utt))
             # the following block can be optimized
             a2p_inds = {}
             for utt in utts:
@@ -305,26 +330,51 @@ class SiameseSet(KaldiLoader):
                         pos += 1
                         a2n_inds[u1].append(pos)
                         a2n_inds[u2].append(pos)
-           
+
             return utts, a2p_inds, ApS, PS, a2n_inds, AnS, NS
 
 
 class KaldiTester(Dataset):
 
-    def __init__(self, scp_path, trials, use_gpu=False):
+    def __init__(self, scp_path, trials, use_gpu=False, pre_load=False):
         super(KaldiTester, self).__init__()
         self.datas = load_scp(scp_path)
+        self.tot = len(self.datas)
         self.use_gpu = use_gpu
         self.trials = trials
+        self.miss = 0
+        self.pre_load = pre_load
+        if self.pre_load:
+            self.data = {}
+            for key in self.datas:
+                self.data[key] = torch.from_numpy(self.datas.get(key))
+                if self.use_gpu:
+                    self.data[key] = self.data[key].cuda()
 
     def __getitem__(self, item):
         utt1, utt2, is_target = self.trials[item]
-        xvec1 = torch.from_numpy(self.datas.get(utt1))
-        xvec2 = torch.from_numpy(self.datas.get(utt2))
-        if self.use_gpu:
-            xvec1 = xvec1.cuda()
-            xvec2 = xvec2.cuda()
+        if not self.pre_load:
+            xvec1 = torch.from_numpy(self.datas.get(utt1))
+            xvec2 = torch.from_numpy(self.datas.get(utt2))
+            if self.use_gpu:
+                xvec1 = xvec1.cuda()
+                xvec2 = xvec2.cuda()
+        else:
+            xvec1 = self.data[utt1]
+            xvec2 = self.data[utt2]
         return xvec1, xvec2, utt1, utt2
+
+    def clear(self):
+        i = -1
+        while i < len(self.trials) - 1:
+            i += 1
+            utt1, utt2, is_target = self.trials[i]
+            if utt1 in self.datas and utt2 in self.datas:
+                continue
+            else:
+                self.trials.pop(i)
+                self.miss += 1
+                i -= 1
 
     def __len__(self):
         return len(self.trials)

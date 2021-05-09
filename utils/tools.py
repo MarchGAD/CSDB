@@ -3,6 +3,24 @@ import torch
 import json
 import os
 import re
+from itertools import combinations
+
+
+def ffsemior(mat):
+
+    P = mat @ mat.transpose(0, 1)
+    PPT = P @ P.transpose(0, 1)
+    alpha = torch.trace(PPT) / torch.trace(P)
+    P = 1.0 / alpha * mat @ mat.transpose(0, 1)
+    Q = P - torch.diag(torch.ones(mat.size(0))).cuda()
+    return torch.trace(Q @ Q.transpose(0, 1))
+
+
+def semior(mat):
+
+    P = mat @ mat.transpose(0, 1)
+    Q = P - torch.diag(torch.ones(mat.size(0))).cuda()
+    return torch.trace(Q @ Q.transpose(0, 1))
 
 
 class RandomSelector:
@@ -124,15 +142,80 @@ def epoch_control(dir_path, prefix, save_epochs):
     else:
         return [i[0] for i in tmpls[:1 - save_epochs]]
 
+
+def generate_inds(spk_num, utt_num):
+    ap_inds = [[] for _ in range(spk_num * utt_num)]
+    an_inds = [[] for _ in range(spk_num * utt_num)]
+    pos = -1
+
+    for si in range(spk_num):
+        for ui, uj in combinations(range(utt_num), 2):
+            pos += 1
+            ap_inds[ui + si * utt_num].append(pos)
+            ap_inds[uj + si * utt_num].append(pos)
+
+    pos = -1
+    for si, sj in combinations(range(spk_num), 2):
+        for ui in range(utt_num):
+            for uj in range(utt_num):
+                pos += 1
+                an_inds[ui + si * utt_num].append(pos)
+                an_inds[uj + sj * utt_num].append(pos)
+    return ap_inds, an_inds
+
+
+def generate_inds_mu(spk_num, utt_num):
+    ap_inds = [[] for _ in range(spk_num * utt_num)]
+    an_inds = [[] for _ in range(spk_num * utt_num)]
+    pos = -1
+    half_utt = int(utt_num / 2)
+    # ap
+    for s in range(spk_num):
+        for u in range(half_utt):
+            pos += 1
+            ap_inds[u + s * utt_num].append(pos)
+            ap_inds[u + s * utt_num + half_utt].append(pos)
+
+    pos = -1
+    # an
+    for si, sj in combinations(range(spk_num), 2):
+        for u in range(utt_num):
+            pos += 1
+            an_inds[u + si * utt_num].append(pos)
+            an_inds[u + sj * utt_num].append(pos)
+    return ap_inds, an_inds
+
+
 if __name__ == '__main__':
     import torch
-    import time
-    # a = torch.rand(40, 20)
-    # b = torch.rand(40, 20)
-    # t1 = time.time()
-    # k = overlay(a, b)
-    # t2 = time.time()
-    # t = overlay2(a, b)
-    # t3 = time.time()
-    # print(torch.sum(torch.abs(k - t)))
-    # print(t2 - t1, t3 - t2)
+    import torch.nn as nn
+    torch.manual_seed(100)
+    a = nn.Linear(4, 2)
+    opt = torch.optim.SGD(a.parameters(), lr=10)
+    inp = torch.rand(5, 4)
+
+    def tr(mat):
+        P = mat @ mat.transpose(0, 1)
+        Q = P @ P.transpose(0, 1) - torch.diag(torch.ones(mat.size(0)))
+        return torch.trace(Q @ Q.transpose(0, 1))
+
+    we = a.state_dict()['weight']
+    print(we, tr(we))
+    res = a(inp)
+    loss = torch.mean(res)
+
+    for name, param in a.named_parameters():
+        if name == 'weight':
+            loss += ffsemior(param)
+
+    loss.backward()
+    opt.step()
+
+    print(we, tr(we))
+
+'''
+tensor([[-0.3883,  0.3158, -0.2374, -0.0161],
+        [ 0.1765,  0.2539, -0.2373, -0.4572]])
+tensor([[-0.5947, -0.0247, -0.4948, -0.4177],
+        [-0.0299, -0.0866, -0.4947, -0.8588]])
+'''

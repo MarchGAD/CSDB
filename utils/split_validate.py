@@ -34,7 +34,7 @@ def generate_validation(scp_path, seed=19971222, validate_ratio=0.001, utt_per_s
                 for utt in s2t[spk]:
                     f.write(utt + ' ' + utt2path[utt] + '\n')
 
-    write2file('./train.scp', spk2utt)
+    write2file('./voxceleb_v2.scp', spk2utt)
     write2file('./validate.scp', selected_spks)
 
 

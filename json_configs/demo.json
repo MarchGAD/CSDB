@@ -28,5 +28,6 @@
     "spk_num": 5,
     "show_step": 1,
     "utt_per_spk": 4,
-    "pre_load": false
+    "pre_load": false,
+    "test": [1, 2, 3, 4]
 }

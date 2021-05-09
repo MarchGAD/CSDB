@@ -1,8 +1,10 @@
 class Resulter:
 
-    def __init__(self, scores, trials):
+    def __init__(self, scores, trial_file, trials=None):
         self.scores = {}
         self.trials = {}
+
+        assert (trial_file is None) ^ (trials is None)
 
         with open(scores, 'r') as f:
             for line in f:
@@ -11,20 +13,36 @@ class Resulter:
                     continue
                 utt1, utt2, score = tmp
                 self.scores[(utt1, utt2)] = float(score)
-        with open(trials, 'r') as f:
-            for line in f:
-                tmp = line.strip().split()
-                if len(tmp) != 3:
-                    continue
-                utt1, utt2, target = tmp
+
+        if trials is None:
+            with open(trial_file, 'r') as f:
+                for line in f:
+                    tmp = line.strip().split()
+                    if len(tmp) != 3:
+                        continue
+                    utt1, utt2, target = tmp
+                    self.trials[(utt1, utt2)] = target
+        else:
+            for i in trials:
+                utt1, utt2, target = i
                 self.trials[(utt1, utt2)] = target
+
         assert len(self.scores) == len(self.trials)
+        # # assume their relationship is containment
+        # if len(self.scores) < len(self.trials):
+        #     for key in self.trials:
+        #         if key not in self.scores:
+        #             self.trials.pop(key)
+        # elif len(self.scores) > len(self.trials):
+        #     for key in self.scores:
+        #         if key not in self.trials:
+        #             self.scores.pop(key)
 
     def compute_eer(self):
         target_scores = []
         non_target_scores = []
         for tup in self.trials:
-            if self.trials[tup] == 'target':
+            if self.trials[tup] == 'target' or self.trials[tup] == '1':
                 target_scores.append(self.scores[tup])
             else:
                 non_target_scores.append(self.scores[tup])
@@ -47,7 +65,7 @@ class Resulter:
         labels = []
         for tup in self.scores:
             scores.append(self.scores[tup])
-            labels.append(1 if self.trials[tup] == 'target' else 0)
+            labels.append(1 if self.trials[tup] == 'target' or self.trials[tup] == '1' else 0)
         sorted_indexes, thresholds = zip(*sorted([(index, threshold) for (index, threshold) in enumerate(scores)],
                                                  key=lambda x:x[1]))
         labels = [labels[i] for i in sorted_indexes]
@@ -80,9 +98,11 @@ class Resulter:
         eer = self.compute_eer()
         minDCF1 = self.compute_min_dcf(p_target=0.01)
         minDCF2 = self.compute_min_dcf(p_target=0.001)
+        minDCF = (self.compute_min_dcf(p_target=0.005)[0] + minDCF1[0]) / 2
         return {'EER:': eer[0],
                 'minDCF(p-target=0.01):': minDCF1[0],
-                'minDCF(p-target=0.001):': minDCF2[0]}
+                'minDCF(p-target=0.001):': minDCF2[0],
+                'minDCF(0.01 + 0.005)/2:': minDCF}
 
 if __name__ == '__main__':
     a = Resulter('/raid/sdd/wuyc/kaldi/egs/voxceleb/0007_voxceleb_v2_1a/exp/scores_voxceleb1_test', './trials')
